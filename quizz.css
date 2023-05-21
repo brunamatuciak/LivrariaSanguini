@@ -30,6 +30,7 @@
     margin-top: 10px;
     margin-left: 70px;
     margin-bottom: 100px;
+    cursor: pointer;
 }
 
 #pergunta1, #pergunta2, #pergunta3, #pergunta4, #pergunta5 {
@@ -45,6 +46,7 @@
 }
 
 .perguntas{
+    cursor: pointer;
     width: 30%;
     height: 20vh;
     text-align: center;
@@ -58,4 +60,23 @@
     font-family: var(--fontePrincipal);
     text-align: center;
     margin-bottom: 20px;
+}
+
+/* resultado */
+
+
+
+.containerQuizzResul{
+    color: #fff;
+    font-family: var(--fontePrincipal);
+    font-size: 36px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    margin-left: 8%;
+}
+
+.containerQuizzResul img{
+    width: 310px;
 }

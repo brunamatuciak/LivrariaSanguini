@@ -1,7 +1,7 @@
 :root {
     --corBody: #F5F1E6;
     --corPrincipal: #477C83;
-    --corSecundaria: #57A3AD;
+    --corSecundaria: #BB4C2E;
 
     --fontePrincipal: 'Poppins', sans-serif;
     --fonteTitulo: 'Oswald', sans-serif;
@@ -64,7 +64,7 @@ body {
 .login-box .user-box input:valid~label {
     top: -20px;
     left: 0;
-    color: #f4b403;
+    color: var(--corSecundaria);
     font-size: 12px;
 }
 
@@ -72,7 +72,7 @@ body {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: #f4b403;
+    color: var(--corSecundaria);
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -83,13 +83,13 @@ body {
 }
 
 .login-box a:hover {
-    background: #f4b403;
+    background:var(--corSecundaria);
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #f4b403,
-        0 0 25px #f4b403,
-        0 0 50px #f4b403,
-        0 0 100px #f4b403;
+    box-shadow: 0 0 5pxvar(--corSecundaria),
+        0 0 25px var(--corSecundaria),
+        0 0 50px var(--corSecundaria),
+        0 0 100px var(--corSecundaria);
 }
 
 .login-box a span {
@@ -106,4 +106,8 @@ body {
     color: #fff;
     margin-bottom: 1%;
     
+}
+
+.cadastroPreferencia{
+    margin-bottom: 4%;
 }
