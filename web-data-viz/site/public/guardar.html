@@ -1,0 +1,39 @@
+
+
+var texto2 = "";
+    function pergunta1(resposta1) {
+        if (resposta1 == "Um mundo dominado pela tecnologia") {
+            texto2a = "Hackers e jogos"
+            texto2b = "Diferentes mundos"
+
+        }
+        if (resposta1 == "Uma terra muito, muito distante") {
+            texto2a = "Políticas"
+            texto2b = "Dragão"
+
+        }
+        pergunta2.style = "display: block";
+        pergunta2.innerHTML = `
+        <button onclick="pergunta2('${texto2a}')">${texto2a}</button>
+        <button onclick="pergunta2('${texto2b}')">${texto2b}</button>
+        `
+    }
+    function pergunta2(resposta2) {
+        if (resposta2 == "Um mundo dominado pela tecnologia") {
+            texto2a = "Hackers e jogos"
+            texto2b = "Diferentes mundos"
+
+        }
+        if (resposta1 == "Uma terra muito, muito distante") {
+            texto2a = "Políticas"
+            texto2b = "Dragão"
+
+        }
+        pergunta2.style = "display: block";
+        pergunta2.innerHTML = `
+        <button onclick="pergunta2('${texto2}')">${texto2a}</button>
+        <button onclick="pergunta2('${texto2}')">${texto2b}</button>
+        `
+    }
+
+    function pergunta2() 

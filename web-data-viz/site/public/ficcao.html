@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="premiados.css">
+    <title>Livraria Sanguini</title>
+</head>
+
+<body>
+    <div class="corFundo">
+
+        <div class="header" style="width: 100%;">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/novoLogo.png" alt="logo do site" width="70%"></a>
+            </div>
+            <div class="menuHeader">
+                <div class="dropdown">
+                    <button class="dropbtn">Gênero</button>
+                    <div class="dropdown-content">
+                        <a href="./fantasia.html" target="_blank">Fantasia</a>
+                        <a href="./ficcao.html" target="_blank">Ficção Científica</a>
+                    </div>
+                </div>
+                <p><a href="quizz.html" target="_blank">Quizz</a></p>
+                <p><a href="./index.html#sobreMim">Sobre</a></p>
+            </div>
+            <div class="cadastroLogin">
+                <p><a href="cadastro.html" target="_blank">Cadastro</a></p>
+                <hr style="height: 8vh;">
+                <p><a href="login.html" target="_blank">Login</a></p>
+            </div>
+
+        </div>
+
+        <main>
+            <div id="container" class="containertudo">
+
+                <div class="tituloFavorito">
+                    <p>Ficção Científica</p>
+                    <hr width="95%">
+                </div>
+
+                <div class="tituloFavorito" style="display: flex; align-items: baseline;">
+                    <p style="font-size: 17px; margin-left: 5%;">CIBERPUNK</p>
+                    <hr width="82%">
+                </div>
+
+                <div class="livrosPremios">
+                    <div>
+                        <img src="./img/imgCapaLivros/Neuromancer.jpg" onclick="mostrar(5)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/CountZero.jpg" onclick="mostrar(7)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/MonalisaOverdrive.jpg" onclick="mostrar(8)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/euRobo.jpg" onclick="mostrar(2)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/BladeRunner.jpg" onclick="mostrar(9)">
+                    </div>
+                </div>
+
+
+                <div class="tituloFavorito" style="display: flex; align-items: baseline;">
+                    <p style="font-size: 17px; margin-left: 5%;">Império Galáctico</p>
+                    <hr width="82%">
+                </div>
+
+                <div class="livrosPremios">
+                    <div>
+                        <img src="./img/imgCapaLivros/AsCorrentesdoEspaço.jpeg" onclick="mostrar(10)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/Poeira de estrelas.png" onclick="mostrar(22)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/PedranoCéu.jpg" onclick="mostrar(21)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/FundaçãoeImpério.jpg" onclick="mostrar(23)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/SegundaFundação.jpg" onclick="mostrar(24)">
+                    </div>
+                </div>
+
+
+                <div class="tituloFavorito" style="display: flex; align-items: baseline;">
+                    <p style="font-size: 17px; margin-left: 5%;">SPACE OPERA</p>
+                    <hr width="82%">
+                </div>
+
+                <div class="livrosPremios">
+                    <div>
+                        <img src="./img/imgCapaLivros/duna.jpg"onclick="mostrar(4)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/MessiasdeDuna.jpg" onclick="mostrar(25)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/FilhosdeDuna.jpg" onclick="mostrar(26)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/ImperadorDeusdeDuna.jpg" onclick="mostrar(27)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/HeregesdeDuna.jpg" onclick="mostrar(28)">
+                    </div>
+                </div>
+
+
+                <div class="tituloFavorito" style="display: flex; align-items: baseline;">
+                    <p style="font-size: 17px; margin-left: 5%;">UNIVERSO PARALELO</p>
+                    <hr width="82%">
+                </div>
+
+                <div class="livrosPremios">
+                    <div>
+                        <img src="./img/imgCapaLivros/JogadorNúmeroUm.jpg" onclick="mostrar(20)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/oFimdoAmanha.jpg" onclick="mostrar(1)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/ChronosViajantesdoTempo.jpg" onclick="mostrar(29)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/Battle Royale.jpg" onclick="mostrar(30)">
+                    </div>
+                    <div>
+                        <img src="./img/imgCapaLivros/1984.jpg" onclick="mostrar(6)">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="mostrarLivro" class="mostrarLivro" style="display: none;">
+
+                <div class="livroMostrar">
+                    <div>
+                        <img id="urlImg" class="imgLivroMostrar">
+                    </div>
+                    <div class="caixaTextoLivroMostrar">
+                        <div class="filtrosMostrar">
+                            <div id="genero" class="filtrosLivrosMostrar"></div>
+                            <div id="subgenero" class="filtrosLivrosMostrar"></div>
+                            <div class="filtrosLivrosMostrarImg"><a href="./ficcao.html"><img src="./img/setaVoltar.png"></a></div>
+                        </div>
+
+                        <div class="tituloLivroMostrar">
+                            <p id="titulo"></p>
+                            <hr>
+                        </div>
+
+
+                        <div class="textosLivroMostrar">
+                            <div>
+                                <img id="urlImgInfo" width="90%" style="margin-left: 1%;">
+                            </div>
+
+                            <p class="trechoLivroMostrar" id="trechodoLivro"></p>
+
+                            <div class="todosComentariosMostrar">
+
+                                <p class="comentarioLivroMostrar" id="comentario1">
+                                </p>
+
+                                <p class="comentarioLivroMostrar" id="comentario2">
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer>
+                <div class="containerFooter" style="margin-right: 1%;">
+                    <img src="./img/LogoFooter.png" alt="logo" width="70%">
+                </div>
+
+                <ul style="margin-top: 3%; margin-right: 1%;">
+                    <li style="font-size: 25px; margin-bottom: 2%;">Navegação</li>
+                    <hr style="margin-bottom: 5%;">
+                    <li><a href=""></a>Gênero</li>
+                    <li style="margin-left: 30px; font-size: 18px;"><a href="./fantasia.html"
+                            target="_blank"></a>Fantasia</li>
+                    <li style="margin-left: 30px; font-size: 18px;"><a href="./ficcao.html" target="_blank"></a>Ficção
+                        Científica</li>
+                    <li><a href="./quizz.html" target="_blank"></a>Quizz</li>
+                    <li><a href="./index.html"></a>Sobre</li>
+                    <li><a href="./login.html" target="_blank"></a>Login</li>
+                </ul>
+
+                <div class="minhasInfo">
+                    <div class="tituloFooter" style="display: flex; flex-direction: column;">
+                        <p style="font-size: 25px; margin-bottom: 2%;">Nossas redes sociais </p>
+                        <hr style="margin-bottom: 5%;">
+                    </div>
+                    <div class="imgRedes" style="display: flex; align-items: center;">
+                        <a href="https://www.instagram.com/bru.sanguini/" target="_blank"><img src="./img/instagram.png"
+                                width="40px"></a>
+                        <a href="https://www.linkedin.com/in/brunasanguini/" target="_blank"><img
+                                src="./img/linkedin.png" width="41px"></a>
+                    </div>
+                </div>
+
+            </footer>
+
+        </main>
+
+        <footer></footer>
+    </div>
+</body>
+
+</html>
