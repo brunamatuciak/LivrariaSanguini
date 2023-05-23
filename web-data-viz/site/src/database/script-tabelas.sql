@@ -14,8 +14,7 @@ create table Livros (
 create table usuario (
 	idUsuario int primary key auto_increment,
     nome varchar(60),
-    generoFavorit
-    o varchar (30),
+    generoFavorito varchar (30),
     subGeneroFavorito1 varchar(30),
     subGeneroFavorito2 varchar(30),
     fkLogin int,

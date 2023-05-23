@@ -1,387 +1,356 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&display=swap');
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
+:root {
+    --corBody: #F5F1E6;
+    --corPrincipal: #477C83;
+    --corSecundaria: #BB4C2E;
+
+    --fontePrincipal: 'Poppins', sans-serif;
+    --fonteTitulo: 'Oswald', sans-serif;
 }
 
-.container {
-  width: 80%;
-  margin: auto;
-  display: flex;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--corBody);
+}
+
+.corFundo {
+    background-color: var(--corPrincipal);
+    width: 96%;
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 50px;
+    
 }
 
 .header {
-  border-bottom: 3px solid #32b9cd;
+    display: flex;
 }
 
-.header .container {
-  justify-content: space-between;
+.header a{
+    text-decoration: none;
+    color: white;
 }
 
-.header a {
-  text-decoration: none;
-  color: #e3b062;
+.logo {
+    width: 25%;
+    margin-left: 4%;
 }
 
-.agora {
-  font-weight: 800;
+.menuHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    font-family: var(--fontePrincipal);
+    font-size: 20px;
+    
+    background-color: var(--corBody);
+    border-radius: 50px;
 }
 
-.navbar {
-  width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-  color: #e3b062;
-}
-
-
-.titulo {
-  color: #32b9cd;
-  width: fit-content;
-  font-weight: 500;
-}
-
-
-/* BANNER */
-
-.banner {
-  height: fit-content;
-  padding: 40px 0;
-  color: white;
-  background-image: url(".././assets/imgs/bg-jelly-fish-para_outras_pags.png");
-  background-size: cover;
-}
-
-.banner .container {
-  height: 400px;
-  font-size: 36px;
-  justify-content: center;
-  align-items: center;
-}
-
-.tamanho-conteudo { 
-  height: fit-content !important;
-}
-
-.banner p {
-  width: 50%;
-  margin: 0;
-  padding: 0;
-  width: 280px;
-  font-size: 36px;
-}
-
-.banner .container span {
-  font-weight: 800;
-}
-
-/* missao visao valores */
-
-.social {
-  background-color: #e5e5e5;
-  display: flex;
-}
-
-.social .container{
-  justify-content: center;
-}
-
-.box img {
-  width: 170px;
-}
-
-.social .container .boxes {
-  display: flex;
-}
-
-.social p {
-  text-align: center;
-}
-
-.box {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* FOOTER */
-
-.footer {
-  background-color: #32b9cd;
-  height: 150px;
-  color: #fff;
-  display: flex;
-  font-size: 15px;
-}
-
-.footer .container {
-  justify-content: center;
-  text-align: center;
-}
-
-.footer .container .version {
-  font-size: 12px;
+.menuHeader a {
+    text-decoration: none;
+    color: black;
 }
 
 
-/* LOGIN */
 
-.banner .container .card {
-  background-color: #e5e5e5;
-  height: fit-content;
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  color: palevioletred;
-  align-items: center;
-  border-radius: 4px;
+.dropbtn {
+    background-color: var(--corBody);
+    padding: 16px;
+    font-family: var(--fontePrincipal);
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
 }
 
-.card {
-  display: flex;
-  justify-content: space-around;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.card h2 {
-  font-size: 30px;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--corBody);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
-.card h4 {
-  font-size: 16px;
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
-.banner #div_erros_login {
-  margin-top: 15px;
+.dropdown-content a:hover {
+    background-color: var(--corSecundaria)
 }
 
-button {
-  cursor: pointer;
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
-/* FORMULARIO */
-
-.alerta_erro{
-  display: flex;
-  justify-content: flex-end;
+.dropdown:hover .dropbtn {
+    background-color: var(--corBody);
 }
 
-.card_erro {
-  display: none;
-  background-color: #fff;
-  color: black;
-  width: 230px;
-  position: fixed;
-  border-radius: 4px;
-  border: #e6005a 3px solid;
-  padding: 10px;
-  margin-right: 10%;
+.cadastroLogin{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 3%;
+    font-size: 20px;
+    font-family: var(--fontePrincipal);
+    color: white;
 }
 
-.card_erro #mensagem_erro{
-  font-weight: 500;
-  font-size: 20px;
+
+
+.containertudo {
+    margin-left: 5%;
 }
 
-.formulario .tipo_campo {
-  font-size: 20px;
-  font-weight: 600 !important;
+.tituloFavorito {
+    margin-top: 3%;
+
+    font-family: var(--fontePrincipal);
+    font-weight: 400;
+    font-size: 32px;
+    color: white;
 }
 
-.formulario {
-  display: flex;
-  flex-direction: column;
+.livroFavorito {
+    display: flex;
+    margin-top: 3%;
+    margin-left: 4%;
 }
 
-input {
-  margin-bottom: 10px;
-  border: 2px solid #32b9cd;
-  padding: 10px;
-  text-align: center;
-  border-radius: 10px;
+.imgLivroFavorito {
+    width: 390px;
 }
 
-.btn {
-  font-family: "Barlow", sans-serif;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  color: white;
-  background-color: #e6005a;
-  width: 120px;
-  align-self: center;
-  margin-top: 5px;
+.caixaTextoLivro {
+    margin-top: 1%;
+    background-color: var(--corBody);
+    width: 57%;
+    height: 84vh;
 }
 
-.loading-div {
-  width: 50px;
-  margin: auto;
-  display: none;
+.filtros {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.loading-div img {
-  height: 50px;
-  width: 50px;
+.filtrosLivros {
+    margin-top: 2%;
+    background-color: var(--corSecundaria);
+    color: white;
+    border-radius: 20px;
+    padding: 0 20px;
+    font-family: var(--fontePrincipal);
+    font-size: 12px;
 }
 
-/* PAGINA DOS GRÁFICOS */
-
-.janela {
-  display: flex;
-  width: 100vw;
+.tituloLivro {
+    margin-top: 1%;
+    font-family: var(--fonteTitulo);
+    font-size: 36px;
+    margin-left: 5%;
 }
 
-.header-left a {
-  text-decoration: none;
-  color: white;
+.tituloLivro hr {
+    width: 90%;
 }
 
-.header-left {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  height: 100vh;
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
-  /* border: 3px solid pink; */
+.textosLivro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--fontePrincipal);
+    font-size: 15px;
+    margin-top: 1%;
 }
 
-.dash-right {
-  display: flex;
-  width: 80%;
-  height: fit-content;
-  background-color: #161618;
-  position: relative;
-  top: 0;
-  left: 25%;
+
+.trechoLivro {
+    background-color: var(--corSecundaria);
+    color: white;
+    border-radius: 20px;
+    width: 78%;
+    padding: 10px;
+    text-align: center;
 }
 
-.header-left h1 {
-  color: #32b9cd;
+.todosComentarios {
+    display: flex;
+    justify-content: space-around;
 }
 
-.hello {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.comentarioLivro {
+    margin-top: 3%;
+    width: 40%;
+    text-align: center;
+    border: 1px solid var(--corSecundaria);
+    padding: 10px;
 }
 
-.hello h3 {
-  color: #e3b062;
-  font-weight: 300;
-  font-size: 1.2rem;
+
+/* bestsellers */
+
+.tituloBest {
+    margin-top: 10%;
+
+    font-family: var(--fontePrincipal);
+    font-weight: 400;
+    font-size: 32px;
+    color: white;
+
+    margin-bottom: 1%;
 }
 
-.hello h3 span {
-  font-weight: 800;
+.cardsBest {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
 }
 
-.btn-nav {
-  width: 40%;
-  color: white;
-  background-color: #e6005a;
-  border-radius: 5px;
-  text-align: center;
-  padding: 2% 5%;
+.cardsBest img {
+    width: 100%;
+    height: 39vh;
 }
 
-.btn-nav-white {
-  width: 40%;
-  background-color: white;
-  border: 3px solid #e6005a;
-  border-radius: 5px;
-  text-align: center;
-  padding: 2% 5%;
+
+/* quizz */
+
+.fotosQuizz {
+    margin-left: -5%;
+    padding: 0;
+    width: 105%;
 }
 
-.btn-nav-white h3 {
-  color: #e6005a;
-  padding: 0;
-  margin: 0;
+footer {
+    display: flex;
+    margin-left: 7%;
+    margin-bottom: 5%;
 }
 
-.btn-nav h3,
-.btn-logout h3 {
-  margin: 0;
-  padding: 0;
+footer ul {
+    list-style-type: none;
+    color: white;
+    font-family: var(--fontePrincipal);
+    font-size: 20px;
+    margin-bottom: 5%;
+    margin-top: 9%;
 }
 
-.btn-logout {
-  margin: 0;
-  padding: 0;
-  width: 20%;
-  background-color: #32b9cd;
-  color: white;
-  border-radius: 10px;
-  text-align: center;
-  padding: 10px 15px;
-  margin-bottom: 100px;
-  cursor: pointer;
+.minhasInfo {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: var(--fontePrincipal);
+    font-size: 20px;
+    margin-left: 9%;
+    margin-top: 3%;
 }
 
-/* pagina extra - simulador */
-.simulador {
-  color: white;
 
+
+
+.livroMostrar {
+    display: flex;
+    margin-top: 3%;
+    margin-left: 10%;
 }
 
-.simulador .container {
-  flex-direction: column
+.imgLivroMostrar {
+    width: 390px;
 }
 
-/* Alarme */
-#alerta {
-  position: absolute;
-  right: 0px;
+.caixaTextoLivroMostrar {
+    margin-top: 2%;
+    background-color: var(--corBody);
+    width: 57%;
+    height: 90vh;
 }
 
-.mensagem-alarme {
-  background-color: white;
-  border-radius: 5px;
-  width: 300px;
-  height: 80px;
-  margin: 10px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.filtrosMostrar {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.mensagem-alarme h3 {
-  font-size: 14px;
-  margin: 0;
+.filtrosLivrosMostrar {
+    margin-top: 2%;
+    background-color: var(--corSecundaria);
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: var(--fontePrincipal);
+    font-size: 14px;
 }
 
-.mensagem-alarme .informacao {
-  margin: 10px;
+.tituloLivroMostrar {
+    margin-top: 1%;
+    font-family: var(--fonteTitulo);
+    font-size: 36px;
+    margin-left: 5%;
 }
 
-.alarme-sino {
-  width: 48px;
-  height: 48px;
-  animation-name: bell;
-  animation-duration: 4s;
-  background-image: url('https://cdn-icons-png.flaticon.com/512/1157/1157000.png');
-  background-size: cover;
-  animation-iteration-count: infinite;
+.tituloLivroMostrar hr {
+    width: 90%;
 }
 
-@keyframes bell {
-  0%   {transform: rotate(25deg)}
-  25%  {transform: rotate(-25deg)}
-  50%  {transform: rotate(25deg)}
-  75%  {transform: rotate(-25deg)}
-  100% {transform: rotate(25deg)}
+.textosLivroMostrar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--fontePrincipal);
+    font-size: 15px;
+    margin-top: 1%;
+}
+
+
+.trechoLivroMostrar {
+    background-color: var(--corSecundaria);
+    color: white;
+    border-radius: 20px;
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+}
+
+.todosComentariosMostrar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.comentarioLivroMostrar {
+    margin-top: 3%;
+    width: 40%;
+    text-align: center;
+    border: 1px solid var(--corSecundaria);
+    padding: 10px;
+}
+
+.filtrosLivrosMostrarImg img{
+    transform: rotate(-90deg);
+    width: 70%;
+}
+
+.filtrosLivrosMostrarImg{
+    margin-top: 2%;
+    background-color: var(--corSecundaria);
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 2px;
 }

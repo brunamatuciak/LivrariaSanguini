@@ -1,85 +1,259 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AquaTech | Página Inicial</title>
-
-    <script src="./js/funcoes.js"></script>
-
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <!-- <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="main.js"></script>
+    <title>Livraria Sanguini</title>
 </head>
 
 <body>
-    <div class="header">
-      <div class="container">
-        <h1 class="titulo">AquaTech</h1>
-        <ul class="navbar">
-          <li class="agora">
-            <a href="#">Inicial</a>
-          </li>
-          <li>
-            <a href="simulador.html">Simulador</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="cadastro.html">Cadastro</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  
-    <div class="banner">
-      <div class="container">
-        <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
-      </div>
-    </div>
-  
-    <div class="social">
-      <div class="container">
-        <div class="boxes">
-          <div class="box">
-            <img src="assets/imgs/planet-earth_color.png">
-            <h4>Missão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/lightbulb_color.png">
-            <h4>Visão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/growth_color.png">
-            <h4>Valores</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
+    <div class="corFundo">
+
+        <div class="header" style="width: 100%;">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/novoLogo.png" alt="logo do site" width="70%"></a>
+            </div>
+            <div class="menuHeader">
+                <div class="dropdown">
+                    <button class="dropbtn">Gênero</button>
+                    <div class="dropdown-content">
+                        <a href="./fantasia.html" target="_blank">Fantasia</a>
+                        <a href="./ficcao.html" target="_blank">Ficção Científica</a>
+                    </div>
+                </div>
+                <p><a href="quizz.html" target="_blank">Quizz</a></p>
+                <p><a href="#sobreMim">Sobre</a></p>
+            </div>
+            <div class="cadastroLogin">
+                <p><a href="cadastro.html" target="_blank">Cadastro</a></p>
+                <hr style="height: 8vh;">
+                <p><a href="login.html" target="_blank">Login</a></p>
+            </div>
+
         </div>
-      </div>
+
+        <main>
+            <div id="container" class="containertudo">
+
+                <div class="tituloFavorito">
+                    <p>Favorito do mês</p>
+                    <hr width="95%">
+                </div>
+
+                <div class="livroFavorito">
+                    <div>
+                        <img src="./img/Flores Para Algernon_l 1.png" class="imgLivroFavorito">
+                    </div>
+                    <div class="caixaTextoLivro">
+                        <div class="filtros">
+                            <div class="filtrosLivros">Ficção Científica</div>
+                            <div class="filtrosLivros">Soft</div>
+                            <div class="filtrosLivros">Prêmio Nebula</div>
+                        </div>
+
+                        <div class="tituloLivro">
+                            <p>Flores Para Algernon - por Daniel Keyes</p>
+                            <hr>
+                        </div>
+
+
+                        <div class="textosLivro">
+                            <div>
+                                <img src="./img/Detalher.png">
+                            </div>
+
+                            <p class="trechoLivro">“O problema, querido professor, é que você queria alguém que pudesse
+                                se tornar inteligente, mas continuasse numa jaula e fosse exibido, quando necessário,
+                                para colher as honras que você busca. O problema é que sou uma pessoa”</p>
+
+                            <div class="todosComentarios">
+
+                                <p class="comentarioLivro">“Uma obra-prima de um esplendor pungente... desoladora,
+                                    absoluta e completamente brilhante.”
+                                    <br>- THE GUARDIAN
+                                </p>
+
+                                <p class="comentarioLivro">
+                                    “Um livro atemporal, feito para emocionar.”<br>
+                                    - THE INDEPENDENT
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tituloBest">
+                    <p>Bestsellers</p>
+                    <hr width="95%">
+                </div>
+
+                <div class="cardsBest">
+                    <div>
+                        <img src="./img/imgCapaLivros/oFimdoAmanha.jpg" onclick="mostrar(1)">
+                    </div>
+                    <div onclick="mostrar(2)">
+                        <img src="./img/imgCapaLivros/euRobo.jpg">
+                    </div>
+                    <div onclick="mostrar(3)">
+                        <img src="./img/imgCapaLivros/AGuerrado Tronos.jpg">
+                    </div>
+                    <div onclick="mostrar(4)">
+                        <img src="./img/imgCapaLivros/duna.jpg">
+                    </div>
+                    <div onclick="mostrar(5)">
+                        <img src="./img/imgCapaLivros/Neuromancer.jpg">
+                    </div>
+                    <div onclick="mostrar(6)">
+                        <img src="./img/imgCapaLivros/1984.jpg">
+                    </div>
+
+                </div>
+
+
+
+
+                <div>
+                    <a href="quizz.html" target="_blank"><img src="./img/Fotos.png" alt="" class="fotosQuizz"></a>
+                </div>
+
+
+                <div class="tituloBest" id="sobreMim">
+                    <p>Sobre mim</p>
+                    <hr width="95%">
+                </div>
+
+                <div class="livroFavorito">
+                    <div>
+                        <img src="./img/fotoPerfil.png" class="imgLivroFavorito" style="height: 85vh;">
+                    </div>
+                    <div class="caixaTextoLivro">
+                        <div class="filtros" style="margin-top: 2%;">
+                            <div class="filtrosLivros">21 anos</div>
+                            <div class="filtrosLivros">Desenvolvedora</div>
+                            <div class="filtrosLivros">Ciência da computação</div>
+                        </div>
+
+                        <div class="tituloLivro" style="margin-top: 3%;">
+                            <p>Um pouco sobre mim - por Bruna Sanguini</p>
+                            <hr>
+                        </div>
+
+
+                        <div class="textosLivro">
+
+
+                            <p class="trechoLivro" style="margin-top: 5%;">“Uma estudante do primeiro semestre de
+                                Ciências da Computação na faculdade SpTech, é apaixonada por livros desde pequena,
+                                especialmente pelos gêneros de Ficção Científica e Fantasia.”</p>
+
+                            <div class="todosComentarios" style="margin-top: 5%;">
+
+                                <p class="comentarioLivro">“Uma obra-prima de um esplendor pungente... desoladora,
+                                    absoluta e completamente brilhante.”
+                                    <br>- Meus pais
+                                </p>
+
+                                <p class="comentarioLivro">
+                                    “Um livro atemporal, feito para emocionar.”<br>
+                                    - THE INDEPENDENT
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr width="95%" style="margin-top: 5%;">
+
+
+            </div>
+
+            <div id="mostrarLivro" class="mostrarLivro" style="display: none;">
+
+                <div class="livroMostrar">
+                    <div>
+                        <img id="urlImg" class="imgLivroMostrar">
+                    </div>
+                    <div class="caixaTextoLivroMostrar">
+                        <div class="filtrosMostrar">
+                            <div id="genero" class="filtrosLivrosMostrar"></div>
+                            <div id="subgenero" class="filtrosLivrosMostrar"></div>
+                            <div class="filtrosLivrosMostrarImg"><a href="./index.html"><img src="./img/setaVoltar.png"></a></div>
+                        </div>
+
+                        <div class="tituloLivroMostrar">
+                            <p id="titulo"></p>
+                            <hr>
+                        </div>
+
+
+                        <div class="textosLivroMostrar">
+                            <div>
+                                <img id="urlImgInfo" width="90%" style="margin-left: 1%;">
+                            </div>
+
+                            <p class="trechoLivroMostrar" id="trechodoLivro"></p>
+
+                            <div class="todosComentariosMostrar">
+
+                                <p class="comentarioLivroMostrar" id="comentario1">
+                                </p>
+
+                                <p class="comentarioLivroMostrar" id="comentario2">
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+           
+
+            <footer>
+                <div class="containerFooter" style="margin-right: 1%;">
+                    <img src="./img/LogoFooter.png" alt="logo" width="70%">
+                </div>
+
+                <ul style="margin-top: 3%; margin-right: 1%;">
+                    <li style="font-size: 25px; margin-bottom: 2%;">Navegação</li>
+                    <hr style="margin-bottom: 5%;">
+                    <li><a href=""></a>Gênero</li>
+                    <li style="margin-left: 30px; font-size: 18px;"><a href="./fantasia.html" target="_blank"></a>Fantasia</li>
+                    <li style="margin-left: 30px; font-size: 18px;"><a href="./ficcao.html" target="_blank"></a>Ficção
+                        Científica</li>
+                    <li><a href="./quizz.html" target="_blank"></a>Quizz</li>
+                    <li><a href="./index.html"></a>Sobre</li>
+                    <li><a href="./login.html" target="_blank"></a>Login</li>
+                </ul>
+
+                <div class="minhasInfo">
+                    <div class="tituloFooter" style="display: flex; flex-direction: column;">
+                        <p style="font-size: 25px; margin-bottom: 2%;">Nossas redes sociais </p>
+                        <hr style="margin-bottom: 5%;">
+                    </div>
+                    <div class="imgRedes" style="display: flex; align-items: center;">
+                        <a href="https://www.instagram.com/bru.sanguini/" target="_blank"><img src="./img/instagram.png"
+                                width="40px"></a>
+                        <a href="https://www.linkedin.com/in/brunasanguini/" target="_blank"><img
+                                src="./img/linkedin.png" width="41px"></a>
+                    </div>
+                </div>
+
+            </footer>
+
+        </main>
+
+        <footer></footer>
     </div>
-  
-    <div class="footer">
-      <div class="container">
-        <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-        <span class="version">v1.0.0</span>
-      </div>
-    </div>
-  </body>
+</body>
 
 </html>
+
