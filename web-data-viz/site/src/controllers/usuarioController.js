@@ -76,9 +76,9 @@ function cadastrar(req, res) {
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
     } else if (generoFavorito == undefined) {
-        res.status(400).send("Seu gênro está undefined!");
+        res.status(400).send("Seu gênero favorito está undefined!");
     } else if (subGeneroFavorito == undefined) {
-        res.status(400).send("Seu subGênro está undefined!");
+        res.status(400).send("Sua sub-genero favorito está undefined!");
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
