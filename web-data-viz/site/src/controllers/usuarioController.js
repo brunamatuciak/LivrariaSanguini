@@ -65,8 +65,10 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
-    var generoFavorito = req.body.generoFavoritoServer;
-    var subGeneroFavorito = req.body.subGeneroFavoritoServer;
+    var generoFavorito = req.body.generoServer;
+    var subGeneroFavorito = req.body.subGeneroServer;
+
+    console.log('DENTRO DA CONTROLLER')
 
     // Faça as validações dos valores
     if (nome == undefined) {
