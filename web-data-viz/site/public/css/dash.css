@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&display=swap');
+
+:root {
+    --corBody: #F5F1E6;
+    --corPrincipal: #477C83;
+    --corSecundaria: #BB4C2E;
+
+    --fontePrincipal: 'Poppins', sans-serif;
+    --fonteTitulo: 'Oswald', sans-serif;
+}
+
+.tituloDash{
+    margin-top: 5%;
+    margin-bottom: 1%;
+    margin-left: 4%;
+    font-family: var(--fontePrincipal);
+    font-weight: 400;
+    font-size: 32px;
+    color: white;
+
+}
+
+form{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 79%;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+label{
+    font-family: var(--fontePrincipal);
+    color: #fff;
+    font-size: 20px;
+    
+}
+
+input{
+    background-color: var(--corBody);
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: var(--fontePrincipal);
+}
+
+.user-boxDash {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}

@@ -8,3 +8,5 @@ router.get("/listar", function (req, res) {
     // função a ser chamada quando acessar /livros/listar
     livrosController.listar(req, res);
 });
+
+module.exports = router;

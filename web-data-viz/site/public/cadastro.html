@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/funcoes.js"></script>
     <title>Livraria Sanguini</title>
 </head>
 
@@ -72,25 +73,25 @@
                 </div>
                 <div class="cadastroPreferencia">
                     <p>Você prefere qual sub-gênero:</p>
-                    <input type="radio" id="ipt_AltaFantasia" name="genero_fav" value="Fantasia">
+                    <input type="radio" id="ipt_AltaFantasia" name="genero_fav" value="Alta Fantasia">
                     <label for="fantasia" style="margin-right: 40px;">Alta Fantasia</label>
 
-                    <input type="radio" id="ipt_baixaFantasia" name="genero_fav" value="Ficcao">
+                    <input type="radio" id="ipt_baixaFantasia" name="genero_fav" value="Baixa Fantasia">
                     <label for="ficcao" style="margin-right: 60px;">Baixa Fantasia</label>
 
-                    <input type="radio" id="ipt_fantasiaMitologica" name="genero_fav" value="Fantasia">
+                    <input type="radio" id="ipt_fantasiaMitologica" name="genero_fav" value="Fantasia Mitologica">
                     <label for="fantasia" style="margin-right: 39px;">Fantasia Mitológica </label>
 
-                    <input type="radio" id="ipt_cyberpunk" name="genero_fav" value="Ficcao">
+                    <input type="radio" id="ipt_cyberpunk" name="genero_fav" value="CyberPunk">
                     <label for="ficcao"style="margin-right: 50px;">CyberPunk</label>
 
-                    <input type="radio" id="ipt_imperioGalatico" name="genero_fav" value="Ficcao">
+                    <input type="radio" id="ipt_imperioGalatico" name="genero_fav" value="Imperio Galatico">
                     <label for="ficcao"style="margin-right: 40px;">Império Galático</label>
 
-                    <input type="radio" id="ipt_spaceOpera" name="genero_fav" value="Fantasia">
+                    <input type="radio" id="ipt_spaceOpera" name="genero_fav" value="Space Opera">
                     <label for="fantasia"style="margin-right: 42px;">Space Opera </label>
                     <br>
-                    <input type="radio" id="ipt_universoParalelo" name="genero_fav" value="Ficcao">
+                    <input type="radio" id="ipt_universoParalelo" name="genero_fav" value="Universo Paralelo">
                     <label for="ficcao"style="margin-right: 40px;">Universo Paralelo</label>
                 </div>
                 
@@ -140,9 +141,6 @@
 
 function cadastrar() {
         // aguardar();
-
-        sessionStorage.ESSA_MERDA = "ESSA PORRA";
-
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
