@@ -9,8 +9,17 @@ function listar() {
     return database.executar(instrucao);
 }
 
+
+function consultar(idLivro) {
+    var instrucao = `
+        SELECT * FROM livros where id = ${idLivro}`
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
-    listar
+    listar,
+    consultar
 };
 
 
