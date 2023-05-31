@@ -140,7 +140,7 @@
 function cadastrar() {
         // aguardar();  
         //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
+        // Agora vá para o método fe//tch logo abaixo
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
@@ -186,18 +186,8 @@ function cadastrar() {
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                cardErro.style.display = "block";
+                window.location.href = "./login.html";
 
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-                alert('Cadastro feito')
-
-                // setTimeout(() => {
-                    window.location.href = "login.html";
-                // }, "2000")
-
-                // limparFormulario();
-                // finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
@@ -208,8 +198,4 @@ function cadastrar() {
 
         return false;
     }
-    // function sumirMensagem() {
-    //     cardErro.style.display = "none"
-    // }
-
 </script>

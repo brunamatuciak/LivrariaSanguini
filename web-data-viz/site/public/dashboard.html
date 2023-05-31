@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <script src="./js/funcoes.js"></script>
     <title>Livraria sanguini</title>
 </head>
+
 <body>
     <div class="corFundo">
 
@@ -43,23 +45,23 @@
         <form>
             <div class="user-boxDash">
                 <label>Nome:</label>
-                <input type="text" name="nome_input" required="">
+                <input type="text" id="nome_input" required="">
             </div>
             <div class="user-boxDash">
                 <label>Senha:</label>
-                <input type="text" name="senha_input" required="">
+                <input type="text" id="senha_input" required="">
             </div>
             <div class="user-boxDash">
                 <label>Email:</label>
-                <input type="text" name="email_input" required="">
+                <input type="text" id="email_input" required="">
             </div>
             <div class="user-boxDash">
                 <label>Gênero favorito:</label>
-                <input type="text" name="genero_input" required="">
+                <input type="text" id="genero_input" required="">
             </div>
             <div class="user-boxDash">
                 <label>Sub-Gênero favorito:</label>
-                <input type="text" name="subGenero_input" required="">
+                <input type="text" id="subGenero_input" required="">
             </div>
         </form>
 
@@ -68,7 +70,151 @@
             <hr width="95%">
         </div>
 
+        <div id="graficos">
+            <div class="doisGraficos" style="display: flex;">
+
+                <div id="grafico1" class="display-block">
+                    <h3 class="tituloGraficos">
+                        <span id="tituloGenero">Gêneros favoritos</span>
+                    </h3>
+                    <div class="graph">
+                        <canvas id="myChartGenero" style="width: 500px;"></canvas>
+                    </div>
+
+                </div>
+
+                <div id="grafico2" class="display-block">
+                    <h3 class="tituloGraficos">
+                        <span id="tituloSubgenero">Subgêneros favoritos</span>
+                    </h3>
+                    <div class="graph">
+                        <canvas id="myChartSubgenero" style="width: 550px;"></canvas>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="grafico3" class="display-block">
+                <h3 class="tituloGraficos">
+                    <span id="tituloQuizz">Respostas dos seus quizzes</span>
+                </h3>
+                <div class="graph" style="width: 35%;">
+                    <canvas id="myChartQuizz" ></canvas>
+                </div>
+
+            </div>
+
+
+        </div>
+
     </div>
-    
+
 </body>
+
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // Primeiro gráfico
+
+    const configGenero = document.getElementById('myChartGenero');
+
+    new Chart(configGenero, {
+        type: 'bar',
+        data: {
+            labels: ['Ficção Científica', 'Fantasia'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19],
+                backgroundColor: [
+                    '#F5F1E6',
+                    '#BB4C2E'
+                ],
+                color: '#ffffff',
+                borderWidth: 4
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+            legend: {
+                labels: {
+                    font: {
+                        size: 30,
+                        family: "'Poppins', sans-serif",
+                        
+
+                    }
+                    
+                }
+            }
+        }
+        }
+    });
+
+    // Segundo gráfico
+
+    const configSubgenero = document.getElementById('myChartSubgenero');
+
+    new Chart(configSubgenero, {
+        type: 'bar',
+        data: {
+            labels: ['Alta Fantasia', 'Baixa Fantasia', 'Cyberpunk', 'Space Opera', 'Imperio Galatico', 'Mundo Alternativo'],
+            datasets: [{
+                label: '# of Votes',
+                data: [2, 9, 1, 6, 4, 2],
+                backgroundColor: [
+                    '#F5F1E6',
+                    '#BB4C2E'
+                ],
+                color: '#ffffff',
+                borderWidth: 4
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // terceiro gráfico
+
+    const configQuizz = document.getElementById('myChartQuizz');
+
+    new Chart(configQuizz, {
+        type: 'doughnut',
+        data: {
+            labels: [
+                'O Fim da Eternidade',
+                'Senhor dos Anéis',
+                'Game of Thrones',
+                'O Mago, Jovem Aprendiz',
+                'Harry Potter',
+                'Duna',
+                'Neuromancer',
+                'Jogador n°1'
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [3, 2, 4, 5, 7, 1, 1, 2],
+                backgroundColor: [
+                    '#BB4C2E',
+                    '#F5F1E6'
+                ],
+                hoverOffset: 4
+            }]
+        }
+    }
+    )
+
+    nome_input.value = sessionStorage.getItem('NOME_USUARIO');
+    email_input.value = sessionStorage.getItem('EMAIL_USUARIO');
+</script>

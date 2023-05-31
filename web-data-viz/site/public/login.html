@@ -52,12 +52,9 @@
                     <input type="password" id="senha_input" required="">
                     <label>Senha</label>
                 </div>
-                <div onclick="entrar()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Login
+               
+                <div>
+                    <button onclick="entrar()"><a>Login</a></button>
                 </div>
             </form>
         </div>
@@ -135,20 +132,18 @@
 
             if (resposta.ok) {
                 console.log(resposta);
-
+                
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
-        
+                    
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
-
-                    setTimeout(function () {
-                    window.location = "./dashboard.html";
-                    }, 1000); // apenas para exibir o loading
-
+                    
+                    
                 });
+                window.location = "./dashboard.html";
 
             } else {
 
@@ -167,8 +162,5 @@
         return false;
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
 
 </script>
