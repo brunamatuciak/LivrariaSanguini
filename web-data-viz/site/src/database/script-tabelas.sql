@@ -16,8 +16,8 @@ create table usuario (
     nome varchar(60),
     email varchar(45),
     senha varchar (45),
-    generoFavorito varchar (30),
-    subGeneroFavorito varchar(30)
+    genero varchar (30),
+    subGenero varchar(30)
     );
     
 create table quizz (

@@ -65,8 +65,8 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
-    var generoFavorito = req.body.generoServer;
-    var subGeneroFavorito = req.body.subGeneroServer;
+    var genero = req.body.generoServer;
+    var subgenero = req.body.subGeneroServer;
 
     console.log('DENTRO DA CONTROLLER')
 
@@ -77,14 +77,14 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else if (generoFavorito == undefined) {
+    } else if (genero == undefined) {
         res.status(400).send("Seu gênero favorito está undefined!");
-    } else if (subGeneroFavorito == undefined) {
+    } else if (subgenero == undefined) {
         res.status(400).send("Sua sub-genero favorito está undefined!");
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha, generoFavorito, subGeneroFavorito)
+        usuarioModel.cadastrar(nome, email, senha, genero, subgenero)
             .then(
                 function (resultado) {
                     res.json(resultado);
