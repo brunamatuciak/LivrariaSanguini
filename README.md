@@ -17,12 +17,16 @@
 
 ## 📚 Sobre o projeto
 
-<p>O site Livraria Sanguini é um projeto para o curso de Ciência da Computação na faculdade SpTech, em que o objetivo é criar um tema baseado ema lgo que você goste e se identifica. O assutno do site já é bem evidente pelo seu título: "Livraria", girando em torno dos gêneros de Ficção Científica e Fantasia, espero levar você em cada um dos mundos que já visitei ao longo da minha vida</p>
+<p>O site Livraria Sanguini é um projeto para o curso de Ciência da Computação na faculdade SpTech, em que o objetivo é criar um tema baseado em algo que você goste e se identifica. O assunto do site é sobre livros, girando em torno dos gêneros de Ficção Científica e Fantasia que são os meus preferidos atualmente, espero com esse projeto melhorar minhas aptidões na linguagens de programações requeridas e conseguir mostrar um pouco de todos os mundos os quais já visitei.</p>
 
 ## Linguagens utilizadas
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"/>
+<img src="https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white"/>
+
 
 
 ## 🎨 Layout
