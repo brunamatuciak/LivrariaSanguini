@@ -114,4 +114,22 @@ body {
 
 .cadastroPreferencia{
     margin-bottom: 4%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20%;
+    
 }
+
+.cadastroPreferencia select{
+    background-color:  rgba(42, 57, 31, 0.5);
+    color: #F5F1E6;
+    border: none;
+    font-size: 16px;
+    font-family: var(--fontePrincipal);
+}
+
+.cadastroPreferencia option{
+    background-color: #F5F1E6;
+    color: black;
+}
+

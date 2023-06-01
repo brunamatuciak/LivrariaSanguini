@@ -66,7 +66,7 @@
         </form>
 
         <div class="tituloDash">
-            <p>Outros usuários</p>
+            <p>Compare com outros usuários!</p>
             <hr width="95%">
         </div>
 
@@ -77,8 +77,8 @@
                     <h3 class="tituloGraficos">
                         <span id="tituloGenero">Gêneros favoritos</span>
                     </h3>
-                    <div class="graph">
-                        <canvas id="myChartGenero" style="width: 500px;"></canvas>
+                    <div class="graph" style="width: 750px; height: 400px;">
+                        <canvas id="myChartGenero"></canvas>
                     </div>
 
                 </div>
@@ -87,8 +87,8 @@
                     <h3 class="tituloGraficos">
                         <span id="tituloSubgenero">Subgêneros favoritos</span>
                     </h3>
-                    <div class="graph">
-                        <canvas id="myChartSubgenero" style="width: 550px;"></canvas>
+                    <div class="graph" style="width: 750px; height: 400px;">
+                        <canvas id="myChartSubgenero" ></canvas>
                     </div>
 
                 </div>
@@ -98,8 +98,8 @@
                 <h3 class="tituloGraficos">
                     <span id="tituloQuizz">Respostas dos seus quizzes</span>
                 </h3>
-                <div class="graph" style="width: 35%;">
-                    <canvas id="myChartQuizz" ></canvas>
+                <div class="graph" style="width: 1000px; height: 900px; margin-left: 25%;">
+                    <canvas id="myChartQuizz"></canvas>
                 </div>
 
             </div>
@@ -118,6 +118,9 @@
 <script>
     // Primeiro gráfico
 
+    Chart.defaults.font.size = 18;
+    Chart.defaults.font.family = "'Poppins', sans-serif";
+
     const configGenero = document.getElementById('myChartGenero');
 
     new Chart(configGenero, {
@@ -125,35 +128,47 @@
         data: {
             labels: ['Ficção Científica', 'Fantasia'],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19],
+                label: 'Gênero favortio',
+                data: [2, 9],
                 backgroundColor: [
-                    '#F5F1E6',
-                    '#BB4C2E'
+                    '#94a7b0',
+                    '#509b95'
                 ],
                 color: '#ffffff',
-                borderWidth: 4
+                borderWidth: 4,
+                barPercentage: 0.4
             }]
         },
         options: {
+            maintainAspectRatio: false,
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    grid: {
+                        drawOnChartArea: false
+                    }
+                },
+                x: {
+                    grid: {
+                        drawOnChartArea: false
+                    }
                 }
             },
+            layout: {
+                padding: 25
+            },
             plugins: {
-            legend: {
-                labels: {
-                    font: {
-                        size: 30,
-                        family: "'Poppins', sans-serif",
-                        
+                legend: {
+                    display: false,
+                    labels: {
+                        font: {
+                            size: 25,
+                            family: "'Poppins', sans-serif",
+                            }
 
                     }
-                    
                 }
             }
-        }
         }
     });
 
@@ -164,23 +179,45 @@
     new Chart(configSubgenero, {
         type: 'bar',
         data: {
-            labels: ['Alta Fantasia', 'Baixa Fantasia', 'Cyberpunk', 'Space Opera', 'Imperio Galatico', 'Mundo Alternativo'],
+            labels: [['Alta', 'Fantasia'], ['Baixa', 'Fantasia'],['Fantasia', 'Mitológica'], 'Cyberpunk', ['Space', 'Opera'], ['Imperio', 'Galatico'], ['Universo', 'Paralelo']],
             datasets: [{
-                label: '# of Votes',
-                data: [2, 9, 1, 6, 4, 2],
+                label: 'Subgênero Favorito',
+                data: [2, 9, 1, 6, 4, 2, 3],
                 backgroundColor: [
-                    '#F5F1E6',
-                    '#BB4C2E'
+                    '#35836d',
+                    '#509b95',
+                    '#76a2a8',
+                    '#76a897',
+                    '#94a7b0',
+                    '#b0b5bb',
+                    '#c8c8c8'
                 ],
                 color: '#ffffff',
                 borderWidth: 4
             }]
         },
         options: {
+            maintainAspectRatio: false,
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    grid: {
+                        drawOnChartArea: false
+                    }
+                },
+                x: {
+                    grid: {
+                        drawOnChartArea: false
+                    }
                 }
+            },
+            layout: {
+                padding: 25
+            },
+            plugins: {
+                legend: {
+                display: false,
+            }
             }
         }
     });
@@ -203,18 +240,133 @@
                 'Jogador n°1'
             ],
             datasets: [{
-                label: 'My First Dataset',
-                data: [3, 2, 4, 5, 7, 1, 1, 2],
+                label: 'O Fim da Eternidade',
+                data: [4],
                 backgroundColor: [
-                    '#BB4C2E',
-                    '#F5F1E6'
+                    '#35836d'
+                    
                 ],
-                hoverOffset: 4
-            }]
+                borderColor: ['#ffffff'],
+                borderWidth: 0.5,
+                circumference: (configQuizz) => {
+                    console.log(configQuizz.dataset.data[0])
+                    return configQuizz.dataset.data[0] / 6 * 270;
+                }
+            },
+            {
+                label: 'Senhor dos Anéis',
+                data: ['2'],
+                backgroundColor: [
+        
+                    '#509b95'
+                ],
+                borderColor: ['#ffffff'],
+                borderWidth: 0.5,
+                circumference: (configQuizz) => {
+                    console.log(configQuizz.dataset.data[0])
+                    return configQuizz.dataset.data[0] / 6 * 270;
+                }
+            },
+            {
+                label: 'Game of Thrones',
+                data: ['1'],
+                backgroundColor: [
+        
+                    '#76a897'
+                ],
+                 borderColor: ['#ffffff'],
+                borderWidth: 0.5,
+                circumference: (configQuizz) => {
+                    console.log(configQuizz.dataset.data[0])
+                    return configQuizz.dataset.data[0] / 6 * 270;
+                }
+            },
+            {
+                label: 'O Mago, Jovem Aprendiz',
+                data: ['6'],
+                backgroundColor: [
+        
+                    '#76a2a8'
+                ],
+                 borderColor: ['#ffffff'],
+                borderWidth: 0.5,
+                circumference: (configQuizz) => {
+                    console.log(configQuizz.dataset.data[0])
+                    return configQuizz.dataset.data[0] / 6 * 270;
+                }
+            },
+            {
+                label: 'Harry Potter',
+                data: ['4'],
+                backgroundColor: [
+        
+                    '#94a7b0'
+                ],
+                 borderColor: ['#ffffff'],
+                borderWidth: 0.5,
+                circumference: (configQuizz) => {
+                    console.log(configQuizz.dataset.data[0])
+                    return configQuizz.dataset.data[0] / 6 * 270;
+                }
+            },
+            {
+                label: 'Duna',
+                data: ['2'],
+                backgroundColor: [
+        
+                    '#b0b5bb'
+                ],
+                 borderColor: ['#ffffff'],
+                borderWidth: 0.5,
+                circumference: (configQuizz) => {
+                    console.log(configQuizz.dataset.data[0])
+                    return configQuizz.dataset.data[0] / 6 * 270;
+                }
+            },
+            {
+                label: 'Neuromancer',
+                data: ['2'],
+                backgroundColor: [
+        
+                    '#c8c8c8'
+                ],
+                 borderColor: ['#ffffff'],
+                borderWidth: 0.5,
+                circumference: (configQuizz) => {
+                    console.log(configQuizz.dataset.data[0])
+                    return configQuizz.dataset.data[0] / 6 * 270;
+                }
+            },
+            {
+                label: 'Jogador n°1',
+                data: ['2'],
+                backgroundColor: [
+        
+                    '#dfdfdf'
+                ],
+                 borderColor: ['#ffffff'],
+                borderWidth: 0.5,
+                circumference: (configQuizz) => {
+                    console.log(configQuizz.dataset.data[0])
+                    return configQuizz.dataset.data[0] / 6 * 270;
+                }
+            }
+        ]
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+                padding: 25
+            }
         }
+        
     }
     )
 
     nome_input.value = sessionStorage.getItem('NOME_USUARIO');
     email_input.value = sessionStorage.getItem('EMAIL_USUARIO');
+    senha_input.value = sessionStorage.getItem('SENHA_USUARIO');
+    genero_input.value = sessionStorage.getItem('GENERO_USUARIO');
+    subGenero_input.value = sessionStorage.getItem('SUBGENERO_USUARIO');
+   
 </script>

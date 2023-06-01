@@ -4,6 +4,8 @@
     --corBody: #F5F1E6;
     --corPrincipal: #477C83;
     --corSecundaria: #BB4C2E;
+    --corTerciaria: #214146;
+    
 
     --fontePrincipal: 'Poppins', sans-serif;
     --fonteTitulo: 'Oswald', sans-serif;
@@ -56,10 +58,25 @@ input{
     display: flex;
     font-family: var(--fontePrincipal);
     justify-content: center;
+    margin-bottom: 2%;
   }
   
 
 #graficos{
-    margin-left: 5%;
     margin-top: 3%;
+}
+
+
+.graph{
+    background-color: var(--corBody);
+    border-radius: 20px;
+    border: 2px solid var(--corTerciaria);
+    display: flex;
+    justify-content: center;
+}
+
+.doisGraficos{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
 }
