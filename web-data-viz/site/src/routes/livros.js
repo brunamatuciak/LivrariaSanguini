@@ -14,4 +14,6 @@ router.get("/consultar/:idLivro", function (req, res) {
     livrosController.consultar(req, res);
 });
 
+
+
 module.exports = router;

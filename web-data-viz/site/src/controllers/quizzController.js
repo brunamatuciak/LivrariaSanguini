@@ -19,41 +19,33 @@ function listar(req, res) {
         );
 }
 
-function cadastrar(req, res) {
-    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+
+
+function cadastrarResultado(res,res) {
     var fkUsuario = req.body.fkUsuarioServer;
     var fkLivro = req.body.fkLivroServer;
-   
 
     console.log('DENTRO DA CONTROLLER')
 
-    // Faça as validações dos valores
-    if (fkUsuario == undefined) {
-        res.status(400).send("Seu fkUsuario está undefined!");
-    } else if (fkLivro == undefined) {
-        res.status(400).send("Seu fkLivro está undefined!");
-    }  else {
-        
-        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(fkUsuario, fkLivro)
-            .then(
-                function (resultado) {
-                    res.json(resultado);
-                }
-            ).catch(
-                function (erro) {
-                    console.log(erro);
-                    console.log(
-                        "\nHouve um erro ao realizar o cadastro! Erro: ",
-                        erro.sqlMessage
-                    );
-                    res.status(500).json(erro.sqlMessage);
-                }
+    quizzModel.cadastrarResultado(fkUsuario, fkLivro)
+    .then(
+        function (resultado) {
+            res.json(resultado);
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log(
+                "\nHouve um erro ao realizar o cadastro! Erro: ",
+                erro.sqlMessage
             );
-    }
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
+
 }
 
 module.exports = {
-    cadastrar,
+    cadastrarResultado,
     listar,
 }

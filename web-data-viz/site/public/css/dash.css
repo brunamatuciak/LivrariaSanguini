@@ -24,8 +24,7 @@
 
 form{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 79%;
     margin-top: 50px;
     margin-left: 100px;
@@ -35,7 +34,7 @@ label{
     font-family: var(--fontePrincipal);
     color: #fff;
     font-size: 20px;
-    
+    width: 25%;
 }
 
 input{
@@ -44,12 +43,15 @@ input{
     border-radius: 20px;
     padding: 10px;
     font-family: var(--fontePrincipal);
+    margin-left: 3%;
+    width: 30%;
+    text-align: center;
 }
 
 .user-boxDash {
     display: flex;
-    justify-content: space-between;
     margin-top: 20px;
+    
     
 }
 
@@ -73,10 +75,12 @@ input{
     border: 2px solid var(--corTerciaria);
     display: flex;
     justify-content: center;
+    margin-bottom: 5%;
 }
 
 .doisGraficos{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 3%;
 }

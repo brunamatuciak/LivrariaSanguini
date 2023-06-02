@@ -102,9 +102,58 @@ function cadastrar(req, res) {
     }
 }
 
+
+
+function consultarGeneroFantasia(req, res) {
+   
+
+    console.log('DENTRO DA CONTROLLER')
+
+    usuarioModel.consultarGeneroFantasia()
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+}
+
+function consultarGeneroFiccao(req, res) {
+
+
+    console.log('DENTRO DA CONTROLLER')
+
+    usuarioModel.consultarGeneroFiccao()
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+}
+
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    consultarGeneroFantasia,
+    consultarGeneroFiccao
 }

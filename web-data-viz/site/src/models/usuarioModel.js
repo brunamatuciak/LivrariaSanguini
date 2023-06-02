@@ -31,8 +31,26 @@ function cadastrar(nome, email, senha, genero, subGenero) {
     return database.executar(instrucao);
 }
 
+
+
+function consultarGeneroFantasia() {
+    var instrucao = `
+        SELECT count (genero) from usuario where genero = 'Fantasia';
+        `
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+function consultarGeneroFiccao() {
+    var instrucao = `
+        SELECT count (genero) from usuario where genero = 'Ficcao';
+        `
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    consultarGeneroFantasia
 };

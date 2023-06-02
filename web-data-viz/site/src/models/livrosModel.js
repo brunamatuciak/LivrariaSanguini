@@ -3,7 +3,7 @@ var database = require("../database/config")
 
 function listar() {
     var instrucao = `
-        SELECT * FROM quizz;
+        SELECT * FROM Livros;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -12,14 +12,17 @@ function listar() {
 
 function consultar(idLivro) {
     var instrucao = `
-        SELECT * FROM livros where id = ${idLivro}`
+        SELECT * FROM Livros where id = ${idLivro}`
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
 
+
+
 module.exports = {
     listar,
-    consultar
+    consultar,
+    
 };
 
 

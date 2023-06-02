@@ -37,8 +37,10 @@ function consultar(req, res) {
         );
 }
 
+
+
 module.exports = {
     consultar,
-    listar
+    listar,
 
 }
