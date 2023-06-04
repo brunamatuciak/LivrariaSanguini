@@ -439,6 +439,17 @@ jsonLivros = [{
     comentario1: 'Tem um ritmo perfeito<br> - THE INDEPENDENT',
     comentario2: 'Com momentos eletrizantes seguindo-se uns aos outros como batimentos, e um mistério atrás do outro”<br> - THE GUARDIAN',
 },
+{
+    id: 40,
+    titulo: 'Flores Para Algernon - por Daniel Keyes',
+    urlImg: 'Flores Para Algernon_l 1.png',
+    urlImgInfo: 'Detalher.png',
+    genero: 'Ficção Científica',
+    subGenero: 'Universo Paralelo',
+    trechoDoLivro: '“O problema, querido professor, é que você queria alguém que pudesse se tornar inteligente, mas continuasse numa jaula e fosse exibido, quando necessário, para colher as honras que você busca. O problema é que sou uma pessoa”',
+    comentario1: '“Uma obra-prima de um esplendor pungente... desoladora, absoluta e completamente brilhante.” <br>   - THE GUARDIAN',
+    comentario2: 'Um livro atemporal, feito para emocionar.”  <br>  - THE INDEPENDENT',
+},
 ];
 
 
