@@ -3,14 +3,9 @@ use LivrariaSanguini;
 
 create table Livros (
 	id int primary key,
-    titulo varchar(50),
-    genero varchar (40),
-    subGenero varchar (40),
-    trechoDoLivro varchar (150),
-    comentario1 varchar (150),
-    comentario2 varchar (150)
+    titulo varchar(50)
     );
-    
+
 create table usuario (
 	idUsuario int primary key auto_increment,
     nome varchar(60),
@@ -27,19 +22,12 @@ create table quizz (
     foreign key (fkLivro) references Livros (id)
     );
     
-
-
-/*
-comandos para criar usuário em banco de dados azure, sqlserver,
-com permissão de insert + update + delete + select
-*/
-
-CREATE USER [usuarioParaAPIWebDataViz_datawriter_datareader]
-WITH PASSWORD = '#Gf_senhaParaAPIWebDataViz',
-DEFAULT_SCHEMA = dbo;
-
-EXEC sys.sp_addrolemember @rolename = N'db_datawriter',
-@membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
-
-EXEC sys.sp_addrolemember @rolename = N'db_datareader',
-@membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
+insert into Livros values 
+	(1, 'O fim da eternidade'),
+	(3, 'As Crônicas de Gelo e Fogo'),
+    (4, 'Duna'),
+    (5, 'Neuromancer'),
+    (11, 'A Sociedade do Anel'),
+    (14, 'O mago Aprendiz'),
+    (15, 'Harry Potter e a Pedra Filosofal'),
+    (20, 'O Jogador nº1');

@@ -46,7 +46,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 50%;
+    width: 45%;
     font-family: var(--fontePrincipal);
     font-size: 20px;
     
