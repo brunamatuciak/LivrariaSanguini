@@ -35,7 +35,7 @@ function cadastrar(nome, email, senha, genero, subGenero) {
 
 function consultarGeneroFantasia() {
     var instrucao = `
-    SELECT count(genero) as 'genero_fantasia' from usuario where genero = 'Fantasia';
+    SELECT genero, count(genero) as 'numero_de_favoritos' from usuario GROUP BY genero;
         `
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

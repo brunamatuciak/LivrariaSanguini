@@ -209,14 +209,14 @@
 
 
         // Criando estrutura para plotar gráfico - labels
-        let labelsGenero = ['Fantasia', 'Ficção Científica'];
+        let labelsGenero = [];
 
         // Criando estrutura para plotar gráfico - dados
         let dadosGenero = {
             labels: labelsGenero,
                 datasets: [{
                     label: 'Gênero favortio',
-                    data: [2,9],
+                    data: [],
                     backgroundColor: [
                         '#94a7b0',
                         '#509b95'
@@ -233,10 +233,10 @@
         console.log(resposta)
 
         // Inserindo valores recebidos em estrutura para plotar o gráfico
-        for (i = 0; i < resposta.length - 1; i++) {
+        for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            labelsGenero.push(registro.genero_fantasia);
-            dadosGenero.datasets[0].data.push(registro.genero);
+            labelsGenero.push(registro.genero);
+            dadosGenero.datasets[0].data.push(registro.numero_de_favoritos);
         }
 
         console.log('----------------------------------------------')
@@ -290,8 +290,9 @@
             document.getElementById(`myChartGenero`),
             configGenero
         );
+        myChartGenero.update();
 
-        setTimeout(() => atualizarGeneroFantasia(dadosGenero, myChartGenero), 2000);
+        // setTimeout(() => atualizarGeneroFantasia(dadosGenero, myChartGenero), 2000);
     }
 
 

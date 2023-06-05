@@ -35,4 +35,4 @@ insert into Livros values
 select * from usuario;
 
 --  SELECT count(genero) as 'genero_fantasia' from usuario where genero = 'Fantasia';
- SELECT genero, count(genero) as 'Número de favoritos' from usuario GROUP BY genero;
+ SELECT genero, count(genero) as 'numero_de_favoritos' from usuario GROUP BY genero;
