@@ -31,3 +31,8 @@ insert into Livros values
     (14, 'O mago Aprendiz'),
     (15, 'Harry Potter e a Pedra Filosofal'),
     (20, 'O Jogador nº1');
+    
+select * from usuario;
+
+--  SELECT count(genero) as 'genero_fantasia' from usuario where genero = 'Fantasia';
+ SELECT genero, count(genero) as 'Número de favoritos' from usuario GROUP BY genero;

@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <p><a href="quizz.html">Quizz</a></p>
-                <p><a href="#sobreMim">Sobre</a></p>
+                <p><a href="index.html#sobreMim">Sobre</a></p>
             </div>
             <div class="cadastroLogin">
                 <p><a href="cadastro.html">Cadastro</a></p>
@@ -168,6 +168,22 @@
 
         fetch(`/usuarios/consultarGeneroFantasia`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
+                fetch(`/usuario/consultarGeneroFiccao`, {cache: 'no-store'}).then(function (response) {
+                    if  (response.ok) {
+                        response.json().then(function (resposta) {
+                            console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                            resposta.reverse();
+
+                            plotarGrafico(resposta);
+                        });
+                    } else {
+                        console.error('Nenhum dado encontrado ou erro na API');
+                    }
+                })
+                    .catch(function (erro) {
+                        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+                    });
+                
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
@@ -193,14 +209,14 @@
 
 
         // Criando estrutura para plotar gráfico - labels
-        let labelsGenero = ['Ficção Científica', 'Fantasia'];
+        let labelsGenero = ['Fantasia', 'Ficção Científica'];
 
         // Criando estrutura para plotar gráfico - dados
         let dadosGenero = {
             labels: labelsGenero,
                 datasets: [{
                     label: 'Gênero favortio',
-                    data: [2, 9],
+                    data: [2,9],
                     backgroundColor: [
                         '#94a7b0',
                         '#509b95'
@@ -290,20 +306,20 @@
             if (response.ok) {
                 response.json().then(function (novoRegistro) {
 
-                    obterdados();
+                    // obterdados();
                     // alertar(novoRegistro, id);
                     console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
                     console.log(`Dados atuais do gráfico:`);
                     console.log(dadosGenero);
 
-                    let avisoCaptura = document.getElementById(`avisoCaptura`)
-                    avisoCaptura.innerHTML = ""
+                   
+                    
 
 
                     if (novoRegistro[0].genero_fantasia == dadosGenero.labels[dadosGenero.labels.length - 1]) {
                         console.log("---------------------------------------------------------------")
                         console.log("Como não há dadosGenero novos para captura, o gráfico não atualizará.")
-                        avisoCaptura.innerHTML = "<i class='fa-solid fa-triangle-exclamation'></i> Foi trazido o dado mais atual capturado pelo sensor. <br> Como não há dadosGenero novos a exibir, o gráfico não atualizará."
+                        // avisoCaptura.innerHTML = "<i class='fa-solid fa-triangle-exclamation'></i> Foi trazido o dado mais atual capturado pelo sensor. <br> Como não há dadosGenero novos a exibir, o gráfico não atualizará."
                         console.log("Horário do novo dado capturado:")
                         console.log(novoRegistro[0].genero_fantasia)
                         console.log("Horário do último dado capturado:")

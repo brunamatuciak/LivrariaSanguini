@@ -53,3 +53,26 @@ function fecharModal() {
     divModal.style.display = "none";
 }
 
+var alertas = [];
+
+function obterdados() {
+    fetch(`/usuarios/atualizarGeneroFantasia`)
+        .then(resposta => {
+
+            if (resposta.ok) {
+                resposta.json().then(resposta => {
+
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+                    alertar(resposta);
+                });
+            } else {
+
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
+        });
+
+}
