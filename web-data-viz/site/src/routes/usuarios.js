@@ -17,6 +17,20 @@ router.get("/listar", function (req, res) {
 router.get("/consultarGeneroFantasia", function(req,res) {
     usuarioController.consultarGeneroFantasia(req, res);
 });
+router.get("/atualizarGeneroFantasia", function(req,res) {
+    usuarioController.atualizarGeneroFantasia(req, res);
+});
+
+router.get("/atualizarGeneroFantasia", function(req,res) {
+    usuarioController.atualizarGeneroFantasia(req, res);
+});
+
+
+
+
+
+
+
 
 router.get("/consultarGeneroFiccao", function(req,res) {
     usuarioController.consultarGeneroFiccao(req, res);
