@@ -39,7 +39,7 @@
         <div id="container" class="containertudo">
 
             <div class="tituloFavorito" >
-                <p>Você leu Flores para Algernon? Será que vai conseguir responder essas questões?</p>
+                <p>Já leu Flores para Algernon?</p>
                 <hr width="95%">
                 <p style="font-size: 15px;">Responda algumas perguntas e teste se realmente é fã de um dos livros mais cobiçados da ficção científica!</p>
             </div>
@@ -136,15 +136,15 @@
 
     function comecarQuizz() {
         if (sessionStorage.ID_USUARIO != 0) {
-            resp1A = "Uma terra muito, muito distante"
-            resp1B = "Um mundo dominado pela tecnologia"
+            resp1A = "Um rato"
+            resp1B = "Uma raposa"
             divQuizz.style = "display:block"
             pergunta1.innerHTML = `
-            <div class="pQuizz">Você prefere uma história de:</div>
+            <div class="pQuizz">Quem é Algernon?</div>
             <div class="btnQuizzPerg">
-            <button id="perg1A" class="perguntas" style=" background-color: #D3F5FA;" onclick="perguntaQuizz1('${resp1A}')">Uma terra muito, muito distante</button>
+            <button id="perg1A" class="perguntas" style=" background-color: #D3F5FA;" onclick="perguntaQuizz1('${resp1A}')">Um rato</button>
             <div class="pQuizz" style="display: flex; align-items: center;">ou</div>
-            <button id="perg1A" class="perguntas" style=" background-color: #D3F5FA;" onclick="perguntaQuizz1('${resp1B}')">Um mundo dominado pela tecnologia</button>
+            <button id="perg1A" class="perguntas" style=" background-color: #D3F5FA;" onclick="perguntaQuizz1('${resp1B}')">Uma raposa</button>
             </div>
             `
 
@@ -158,28 +158,22 @@
     var texto2a = "";
     var texto2b = "";
     function perguntaQuizz1(resposta1) {
-        if (resposta1 == "Um mundo dominado pela tecnologia") {
-            texto2a = "Hackers e jogos"
-            texto2b = "Diferentes mundos"
-
-            contLivroJogador++;
-            contLivroNeuro++;
-            contLivroDuna++;
-            contLivroFim++;
-        }
-        if (resposta1 == "Uma terra muito, muito distante") {
-            texto2a = "Dragões"
-            texto2b = "Feiticeiros"
-
-            contLivroMago++;
-            contLivroGOT++;
-            contLivroSenhor++;
-            contLivroHP++;
+        if (resposta1 == "Uma raposa") {
+            texto2a = "38"
+            texto2b = "22"
+            erro++
 
         }
+        if (resposta1 == "Um rato") {
+            texto2a = "38"
+            texto2b = "22"
+            acerto++
+
+        }
+       
         pergunta2.style = "display: block";
         pergunta2.innerHTML = `
-        <div class="pQuizz">Você prefere uma história com:</div>
+        <div class="pQuizz">Qual era o QI de Charlie antes da cirurgia?</div>
         <div class="btnQuizzPerg">
         <button id="perg2A" class="perguntas" style=" background-color: #A6D8DF;" onclick="perguntaQuizz2('${texto2a}')">${texto2a}</button>
         <div class="pQuizz" style="display: flex; align-items: center;">ou</div>
@@ -190,41 +184,20 @@
 
 
     function perguntaQuizz2(resposta2) {
-        if (resposta2 == "Hackers e jogos") {
-            texto2a = "Competições e pontuações"
-            texto2b = "Corrida contra o tempo"
-
-            contLivroJogador++;
-            contLivroNeuro++;
-
+        if (resposta2 == "38") {
+            texto2a = "Lili"
+            texto2b = "Harriet"
+            acerto++
         }
-        if (resposta2 == "Diferentes mundos") {
-            texto2a = "Políticas"
-            texto2b = "Luta contra o tempo"
-
-            contLivroDuna++;
-            contLivroFim++;
-
+        if (resposta2 == "22") {
+            texto2a = "Lili"
+            texto2b = "Harriet"
+            erro++
         }
-        if (resposta2 == "Dragões") {
-            texto2a = "Política"
-            texto2b = "Bem vs Mal"
-
-            contLivroGOT++;
-            contLivroSenhor++;
-            
-        }
-        if (resposta2 == "Feiticeiros") {
-            texto2a = "Animais falantes"
-            texto2b = "Varinhas mágicas"
-            
-            contLivroMago++;
-            contLivroHP++;
-
-        }
+        
         pergunta3.style = "display: block";
         pergunta3.innerHTML = `
-        <div class="pQuizz">Você prefere uma história com:</div>
+        <div class="pQuizz">Por quem Charlie se apaixona durante a história?</div>
         <div class="btnQuizzPerg">
         <button id="perg3A" class="perguntas" style=" background-color: #7EC2CC;" onclick="perguntaQuizz3('${texto2a}')">${texto2a}</button>
         <div class="pQuizz" style="display: flex; align-items: center;">ou</div>
@@ -235,66 +208,23 @@
 
     function perguntaQuizz3(resposta3) {
         
-        if (resposta3 == "Competições e pontuações")  {
-            texto2a = "Trágico"
-            texto2b = "Emocionante"
-
-            contLivroJogador++;
-        }
-        if (resposta3 == "Corrida contra o tempo"){
-            texto2a = "Trágico"
-            texto2b = "Emocionante"
-
-            contLivroNeuro++;
-
-        }
-
-        if (resposta3 == "Políticas") {
-            texto2a = "Viagens ao futuro e passado"
-            texto2b = "A criação de um novo império"
-
-            contLivroDuna++;
-
-        }
-        if (resposta3 == "Política") {
-            texto2a = "Dramático"
-            texto2b = "Épico"
-
-            contLivroGOT++;
+        if (resposta3 == "Lili")  {
+            texto2a = "Jogo de Labirinto"
+            texto2b = "Jogo de cartas"
+            erro++
             
         }
-        if ( resposta3 == "Bem vs Mal") {
-            texto2a = "Dramático"
-            texto2b = "Épico"
-
-            contLivroSenhor++;
-        }
-        if(resposta3 == "Animais falantes"){
-            texto2a = "Triste"
-            texto2b = "Final feliz"
-
-            contLivroMago++;
+        if (resposta3 == "Harriet"){
+            texto2a = "Jogo de Labirinto"
+            texto2b = "Jogo de cartas"
+            acerto++           
 
         }
-        if(resposta3 == "Varinhas mágicas"){
-            texto2a = "Triste"
-            texto2b = "Final feliz"
 
-            contLivroHP++;
-
-        }
-        if (resposta3 == "Luta contra o tempo"){
-            texto2a = "Viagens ao futuro e passado"
-            texto2b = "A criação de um novo império"
-
-            contLivroFim++;
-
-        }
-       
         
         pergunta4.style = "display: block";
         pergunta4.innerHTML = `
-        <div class="pQuizz">Você prefere uma história com um final:</div>
+        <div class="pQuizz">Qual era o jogo que Algernon e Charlie competiam:</div>
         <div class="btnQuizzPerg">
             <button id="perg4A" class="perguntas" style=" background-color: #519AA5;" onclick="perguntaQuizz4('${texto2a}')">${texto2a}</button>
         <div class="pQuizz" style="display: flex; align-items: center;">ou</div>
@@ -304,68 +234,25 @@
     }
     function perguntaQuizz4(resposta4) {
         
-        if (resposta4 == "Dramático") {
+        if (resposta4 == "Jogo de cartas") {
             texto2a = "Magia"
             texto2b = "Luta"
 
-            contLivroGOT++;
+        
             
         }
-        if (resposta4 == "Épico") {
+        if (resposta4 == "Jogo de Labirinto") {
             texto2a = "Magia"
             texto2b = "Luta"
             
-            contLivroSenhor++;
+           
 
         }
-        if (resposta4 == "Triste") {
-            texto2a = "Corrida contra o tempo"
-            texto2b = "Lutas"
-
-            contLivroMago++;
-
-        }
-        if (resposta4 == "Final feliz") {
-            texto2a = "Corrida contra o tempo"
-            texto2b = "Lutas"
-
-            contLivroHP++;
-
-        }
-        if (resposta4 == "Trágico") {
-            texto2a = "Um ponto de vista"
-            texto2b = "Vários pontos de vistas"
-
-            contLivroNeuro++;
-
-        }
-        if (resposta4 == "Emocionante") {
-            texto2a = "Um ponto de vista"
-            texto2b = "Vários pontos de vistas"
-            
-            contLivroJogador++;
-            
-        }
-        if (resposta4 == "Viagens ao futuro e passado"){
-            texto2a = "Série"
-            texto2b = "Livro único"
-
-            contLivroFim++;
-
-        }
-        if (resposta4 == "A criação de um novo império"){
-            texto2a = "Série"
-            texto2b = "Livro único"
-
-            contLivroDuna++;
-
-        }
-
         
         
         pergunta5.style = "display: block";
         pergunta5.innerHTML = `
-        <div class="pQuizz">Você prefere uma história com:</div>
+        <div class="pQuizz">Depois de perder seu os benefícios da cirurgia, Charlie vai morar no:</div>
         <div class="btnQuizzPerg">
         <button id="perg5A" class="perguntas" style=" background-color: #3E7F89;" onclick="perguntaQuizz5('${texto2a}')">${texto2a}</button>
         <div class="pQuizz" style="display: flex; align-items: center;">ou</div>
@@ -378,28 +265,28 @@
         quizzResultado.style = "display:block";
         
         if (resposta5 == "Magia"){
-            contLivroSenhor++;
+           
         }
         if (resposta5 == "Luta"){
-            contLivroGOT++;
+        
         }
         if (resposta5 == "Corrida contra o tempo"){
-            contLivroMago++;
+         
         }
         if (resposta5 == "Lutas"){
-            contLivroHP++;
+         
         }
         if (resposta5 == "Um ponto de vista"){
-            contLivroNeuro++;
+          
         }
         if (resposta5 == "Vários pontos de vistas"){
-            contLivroJogador++;
+            
         }
         if (resposta5 == "Série"){
-            contLivroDuna++;
+          
         }
         if (resposta5 == "Livro único"){
-            contLivroFim++;
+       
         }
         if (contLivroDuna >= 3) {
             quizzResultado.innerHTML = `
@@ -460,7 +347,7 @@
                     </div>  `
                     ganhadorVar = 5
         }
-        if (contLivroJogador >= 3) {
+        if ( 3) {
             quizzResultado.innerHTML = `<div class="containerQuizzResul" style="display: flex;">
                      <div class="pQuizzResultado">Seu resultado foi: <br>
                         Jogador Número Um</div>
