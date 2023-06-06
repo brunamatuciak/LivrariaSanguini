@@ -5,13 +5,13 @@
     --corPrincipal: #477C83;
     --corSecundaria: #BB4C2E;
     --corTerciaria: #214146;
-    
+
 
     --fontePrincipal: 'Poppins', sans-serif;
     --fonteTitulo: 'Oswald', sans-serif;
 }
 
-.tituloDash{
+.tituloDash {
     margin-top: 5%;
     margin-bottom: 1%;
     margin-left: 4%;
@@ -22,7 +22,7 @@
 
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     width: 79%;
@@ -30,14 +30,14 @@ form{
     margin-left: 100px;
 }
 
-label{
+label {
     font-family: var(--fontePrincipal);
     color: #fff;
     font-size: 20px;
     width: 25%;
 }
 
-input{
+input {
     background-color: var(--corBody);
     border: none;
     border-radius: 20px;
@@ -51,8 +51,8 @@ input{
 .user-boxDash {
     display: flex;
     margin-top: 20px;
-    
-    
+
+
 }
 
 .tituloGraficos {
@@ -61,15 +61,15 @@ input{
     font-family: var(--fontePrincipal);
     justify-content: center;
     margin-bottom: 2%;
-  }
-  
+}
 
-#graficos{
+
+#graficos {
     margin-top: 3%;
 }
 
 
-.graph{
+.graph {
     background-color: var(--corBody);
     border-radius: 20px;
     border: 2px solid var(--corTerciaria);
@@ -78,9 +78,44 @@ input{
     margin-bottom: 5%;
 }
 
-.doisGraficos{
+.doisGraficos {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 3%;
+}
+
+/* tabela */
+
+.tabelaRank {
+    color: #F5F1E6;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+table {
+    width: 50%;
+
+}
+
+tr:nth-child(even) {
+    background-color: var(--corBody);
+    color: black;
+}
+
+
+tr:hover {
+    background-color: var(--corSecundaria);
+}
+
+th{
+    background-color: var(--corTerciaria);
+    padding: 1%;
+}
+
+
+td {
+    padding: 5%;
 }

@@ -138,6 +138,21 @@ body {
     width: 390px;
 }
 
+.quizzFavorito button{
+    background-color: var(--corSecundaria);
+    border: none;
+    border-radius: 20px;
+    font-family: var(--fontePrincipal);
+    padding: 10px;
+    width: 50%;
+    margin-top: 2%;
+}
+
+.quizzFavorito a{
+    color: #F5F1E6;
+    text-decoration: none;
+}
+
 .caixaTextoLivro {
     margin-top: 1%;
     background-color: var(--corBody);

@@ -67,10 +67,12 @@
 
 
 .containerQuizzResul{
+    display: flex;
+    flex-direction: column;
     color: #fff;
     font-family: var(--fontePrincipal);
     font-size: 36px;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     text-align: center;
     width: 70%;
@@ -79,4 +81,11 @@
 
 .containerQuizzResul img{
     width: 310px;
+}
+
+.pQuizzResultadoLivro{
+    color: #fff;
+    font-family: var(--fontePrincipal);
+    font-size: 22px;
+    margin-bottom: 5%;
 }

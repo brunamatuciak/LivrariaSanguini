@@ -135,22 +135,22 @@
     var resp1B = "";
 
     function comecarQuizz() {
-        if (sessionStorage.ID_USUARIO != 0) {
+        // if (sessionStorage.ID_USUARIO != 0) {
             resp1A = "Um rato"
             resp1B = "Uma raposa"
             divQuizz.style = "display:block"
             pergunta1.innerHTML = `
             <div class="pQuizz">Quem é Algernon?</div>
-            <div class="btnQuizzPerg">
+             <div class="btnQuizzPerg" style="margin-bottom: 5%">
             <button id="perg1A" class="perguntas" style=" background-color: #D3F5FA;" onclick="perguntaQuizz1('${resp1A}')">Um rato</button>
             <div class="pQuizz" style="display: flex; align-items: center;">ou</div>
             <button id="perg1A" class="perguntas" style=" background-color: #D3F5FA;" onclick="perguntaQuizz1('${resp1B}')">Uma raposa</button>
             </div>
             `
 
-        } else {
-            alert('Por favor logue antes!')
-        }
+        // } else {
+        //     alert('Por favor logue antes!')
+        // }
     }
 
     
@@ -174,7 +174,7 @@
         pergunta2.style = "display: block";
         pergunta2.innerHTML = `
         <div class="pQuizz">Qual era o QI de Charlie antes da cirurgia?</div>
-        <div class="btnQuizzPerg">
+         <div class="btnQuizzPerg" style="margin-bottom: 5%">
         <button id="perg2A" class="perguntas" style=" background-color: #A6D8DF;" onclick="perguntaQuizz2('${texto2a}')">${texto2a}</button>
         <div class="pQuizz" style="display: flex; align-items: center;">ou</div>
         <button id="perg2A" class="perguntas" style=" background-color: #A6D8DF;" onclick="perguntaQuizz2('${texto2b}')">${texto2b}</button>
@@ -185,20 +185,20 @@
 
     function perguntaQuizz2(resposta2) {
         if (resposta2 == "38") {
-            texto2a = "Lili"
-            texto2b = "Harriet"
+            texto2a = "Fay"
+            texto2b = "Alice"
             acerto++
         }
         if (resposta2 == "22") {
-            texto2a = "Lili"
-            texto2b = "Harriet"
+            texto2a = "Fay"
+            texto2b = "Alice"
             erro++
         }
         
         pergunta3.style = "display: block";
         pergunta3.innerHTML = `
         <div class="pQuizz">Por quem Charlie se apaixona durante a história?</div>
-        <div class="btnQuizzPerg">
+         <div class="btnQuizzPerg" style="margin-bottom: 5%">
         <button id="perg3A" class="perguntas" style=" background-color: #7EC2CC;" onclick="perguntaQuizz3('${texto2a}')">${texto2a}</button>
         <div class="pQuizz" style="display: flex; align-items: center;">ou</div>
         <button id="perg3A" class="perguntas" style=" background-color: #7EC2CC;" onclick="perguntaQuizz3('${texto2b}')">${texto2b}</button>
@@ -208,13 +208,13 @@
 
     function perguntaQuizz3(resposta3) {
         
-        if (resposta3 == "Lili")  {
+        if (resposta3 == "Fay")  {
             texto2a = "Jogo de Labirinto"
             texto2b = "Jogo de cartas"
             erro++
             
         }
-        if (resposta3 == "Harriet"){
+        if (resposta3 == "Alice"){
             texto2a = "Jogo de Labirinto"
             texto2b = "Jogo de cartas"
             acerto++           
@@ -225,7 +225,7 @@
         pergunta4.style = "display: block";
         pergunta4.innerHTML = `
         <div class="pQuizz">Qual era o jogo que Algernon e Charlie competiam:</div>
-        <div class="btnQuizzPerg">
+        <div class="btnQuizzPerg" style="margin-bottom: 5%">
             <button id="perg4A" class="perguntas" style=" background-color: #519AA5;" onclick="perguntaQuizz4('${texto2a}')">${texto2a}</button>
         <div class="pQuizz" style="display: flex; align-items: center;">ou</div>
         <button id="perg4A" class="perguntas" style=" background-color: #519AA5;" onclick="perguntaQuizz4('${texto2b}')">${texto2b}</button>
@@ -235,16 +235,16 @@
     function perguntaQuizz4(resposta4) {
         
         if (resposta4 == "Jogo de cartas") {
-            texto2a = "Magia"
-            texto2b = "Luta"
-
+            texto2a = "Escola da Residência Warren"
+            texto2b = "Lar Smith"
+            erro++;
         
             
         }
         if (resposta4 == "Jogo de Labirinto") {
-            texto2a = "Magia"
-            texto2b = "Luta"
-            
+            texto2a = "Escola da Residência Warren"
+            texto2b = "Lar Smith"
+            acerto++;
            
 
         }
@@ -252,8 +252,8 @@
         
         pergunta5.style = "display: block";
         pergunta5.innerHTML = `
-        <div class="pQuizz">Depois de perder seu os benefícios da cirurgia, Charlie vai morar no:</div>
-        <div class="btnQuizzPerg">
+        <div class="pQuizz">Onde Charlie acaba morando no final do romance?:</div>
+        <div class="btnQuizzPerg" style="margin-bottom: 5%">
         <button id="perg5A" class="perguntas" style=" background-color: #3E7F89;" onclick="perguntaQuizz5('${texto2a}')">${texto2a}</button>
         <div class="pQuizz" style="display: flex; align-items: center;">ou</div>
         <button id="perg5A" class="perguntas" style=" background-color: #3E7F89;" onclick="perguntaQuizz5('${texto2b}')">${texto2b}</button>
@@ -264,111 +264,61 @@
         divQuizz.style = "display:none";
         quizzResultado.style = "display:block";
         
-        if (resposta5 == "Magia"){
-           
-        }
-        if (resposta5 == "Luta"){
-        
-        }
-        if (resposta5 == "Corrida contra o tempo"){
-         
-        }
-        if (resposta5 == "Lutas"){
-         
-        }
-        if (resposta5 == "Um ponto de vista"){
-          
-        }
-        if (resposta5 == "Vários pontos de vistas"){
-            
-        }
-        if (resposta5 == "Série"){
-          
-        }
-        if (resposta5 == "Livro único"){
        
+        if (resposta5 == "Lar Smith"){
+            erro++;
         }
-        if (contLivroDuna >= 3) {
+        
+        if (resposta5 == "Escola da Residência Warren"){
+            acerto++
+        }
+        
+        if (acerto <= 2) {
             quizzResultado.innerHTML = `
-            <div class="containerQuizzResul" style="display: flex;">
+            <div class="containerQuizzResul">
                
                      <div class="pQuizzResultado">Seu resultado foi: <br>
-                    Duna - Parte 1</div>
-                    <div onclick="mostrar(4)">
-                        <img src="./img/imgCapaLivros/duna.jpg">
-                    </div>  
+                    ${acerto} / 5</div>
+                     <div class="pQuizzResultadoLivro">Você leu mesmo o livro?</div>
+                    
                 </div>`
 
-            ganhadorVar = 4
         }
-        if (contLivroSenhor >= 3) {
+        if (acerto == 3) {
             quizzResultado.innerHTML = `
-            <div class="containerQuizzResul" style="display: flex;">
+            <div class="containerQuizzResul">
+               
                      <div class="pQuizzResultado">Seu resultado foi: <br>
-                    A sociedade do Anel - Parte 1</div>
-                    <div onclick="mostrar(11)">
-                        <img src="./img/imgCapaLivros/ASociedadedoAnel.jpg">
-                    </div>  `
-             ganhadorVar = 11
-        }
-        if (contLivroGOT >= 3) {
-            quizzResultado.innerHTML = `<div class="containerQuizzResul" style="display: flex;">
-                     <div class="pQuizzResultado">Seu resultado foi: <br>
-                        As Crônicas de Gelo e Fogo - Parte 1</div>
-                    <div onclick="mostrar(3)">
-                        <img src="./img/imgCapaLivros/AGuerrado Tronos.jpg">
-                    </div>  `
-                    ganhadorVar = 3
-        }
-        if (contLivroMago >= 3) {
-            quizzResultado.innerHTML = `<div class="containerQuizzResul" style="display: flex;">
-                     <div class="pQuizzResultado">Seu resultado foi: <br>
-                        O Mago Aprendiz</div>
-                    <div onclick="mostrar(14)">
-                        <img src="./img/imgCapaLivros/magoAprendiz.jpg">
-                    </div>  `
-                    ganhadorVar = 14
-        }
-        if (contLivroHP >= 3) {
-            quizzResultado.innerHTML = `<div class="containerQuizzResul" style="display: flex;">
-                     <div class="pQuizzResultado">Seu resultado foi: <br>
-                    Duna - Parte 1</div>
-                    <div onclick="mostrar(15)">
-                        <img src="./img/imgCapaLivros/HarryPottereaPedraFilosofal.jpg">
-                    </div>  `
-                    ganhadorVar = 15
-        }
-        if (contLivroNeuro >= 3) {
-            quizzResultado.innerHTML = `<div class="containerQuizzResul" style="display: flex;">
-                     <div class="pQuizzResultado">Seu resultado foi: <br>
-                        Neuromancer</div>
-                    <div onclick="mostrar(5)">
-                        <img src="./img/imgCapaLivros/Neuromancer.jpg">
-                    </div>  `
-                    ganhadorVar = 5
-        }
-        if ( 3) {
-            quizzResultado.innerHTML = `<div class="containerQuizzResul" style="display: flex;">
-                     <div class="pQuizzResultado">Seu resultado foi: <br>
-                        Jogador Número Um</div>
-                    <div onclick="mostrar(20)">
-                        <img src="./img/imgCapaLivros/JogadorNúmeroUm.jpg">
-                    </div>  `
-                    ganhadorVar = 20
-        }
-        if (contLivroFim >= 3) {
-            quizzResultado.innerHTML = `<div class="containerQuizzResul" style="display: flex;">
-                     <div class="pQuizzResultado">Seu resultado foi: <br>
-                        O Fim da Eternidade</div>
-                    <div onclick="mostrar(1)">
-                        <img src="./img/imgCapaLivros/oFimdoAmanha.jpg">
-                    </div>  `
-                    ganhadorVar = 1
-        }
+                    ${acerto} / 5</div>
+                     <div class="pQuizzResultadoLivro">Tudo bem, pelo menos você tentou!</div>
+                    
+                </div>`
 
-       
+        }
+        if (acerto == 4) {
+            quizzResultado.innerHTML = `
+            <div class="containerQuizzResul">
+               
+                     <div class="pQuizzResultado">Seu resultado foi: <br>
+                    ${acerto} / 5</div>
+                     <div class="pQuizzResultadoLivro">Uau, você realmente leu o livro</div>
+                    
+                </div>`
 
+        }
+        if (acerto == 5) {
+            quizzResultado.innerHTML = `
+            <div class="containerQuizzResul">
+               
+                     <div class="pQuizzResultado">Seu resultado foi: <br>
+                    ${acerto} / 5</div>
+                     <div class="pQuizzResultadoLivro">A sua memória está melhor que a do Charlie dursnte o estudo!</div>
+                    
+                </div>`
+
+        }
     }
+       
 
     function cadastrarResultado() {
         
