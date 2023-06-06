@@ -2,8 +2,8 @@ var quizzModel = require("../models/quizzModel");
 
 var sessoes = [];
 
-function listar(req, res) {
-    quizzModel.listar()
+function listarLivroQuizz(req, res) {
+    quizzModel.listarLivroQuizz()
         .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado);
@@ -47,5 +47,5 @@ function cadastrarResultado(res,res) {
 
 module.exports = {
     cadastrarResultado,
-    listar,
+    listarLivroQuizz,
 }

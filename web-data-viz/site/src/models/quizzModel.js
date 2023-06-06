@@ -1,10 +1,9 @@
 var database = require("../database/config")
 
 
-function listar() {
+function listarLivroQuizz() {
     var instrucao = `
-        SELECT * FROM quizz;
-        SELECT genero, count(genero) as 'numero_de_favoritos' from usuario GROUP BY genero;
+        SELECT fkLivro, count(fkLivro) as 'numero_de_fav' from quizz GROUP BY fkLivro;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -28,5 +27,5 @@ function cadastrarResultado(fkUsuario, fkLivro) {
 
 module.exports = {
     cadastrarResultado,
-    listar
+    listarLivroQuizz
 };

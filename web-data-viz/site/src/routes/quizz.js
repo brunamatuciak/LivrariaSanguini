@@ -5,9 +5,9 @@ var quizzController = require("../controllers/quizzController");
 
 
 
-router.get("/listar", function (req, res) {
+router.get("/listarLivroQuizz", function (req, res) {
     // função a ser chamada quando acessar /quizz/listar
-    quizzController.listar(req, res);
+    quizzController.listarLivroQuizz(req, res);
 });
 
 router.post("/cadastrarResultado", function (req,res) {
