@@ -10,7 +10,7 @@ router.get("/listar", function (req, res) {
     quizzController.listar(req, res);
 });
 
-router.post("/cadastrarQuizz", function (req,res) {
+router.post("/cadastrarResultado", function (req,res) {
     quizzController.cadastrarResultado(req, res)
 })
 

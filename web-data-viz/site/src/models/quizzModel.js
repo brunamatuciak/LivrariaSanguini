@@ -4,6 +4,7 @@ var database = require("../database/config")
 function listar() {
     var instrucao = `
         SELECT * FROM quizz;
+        SELECT genero, count(genero) as 'numero_de_favoritos' from usuario GROUP BY genero;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
