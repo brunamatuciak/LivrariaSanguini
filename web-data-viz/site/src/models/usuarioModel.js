@@ -40,21 +40,14 @@ function consultarGeneroFantasia() {
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
-function atualizarGeneroFantasia() {
+
+function consultarSubgenero() {
     var instrucao = `
-    SELECT count(genero) as 'genero_fantasia' from usuario where genero = 'Fantasia';
+    SELECT subGenero, count(subGenero) as 'numero_de_favorito' from usuario GROUP BY subGenero;
         `
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
-}
 
-
-function consultarGeneroFiccao() {
-    var instrucao = `
-        SELECT count (genero) from usuario where genero = 'Ficcao';
-        `
-    console.log("Executando a instrução SQL: \n" + instrucao);
-    return database.executar(instrucao);
 }
 
 module.exports = {
@@ -62,5 +55,5 @@ module.exports = {
     cadastrar,
     listar,
     consultarGeneroFantasia,
-    atualizarGeneroFantasia
+    consultarSubgenero
 };

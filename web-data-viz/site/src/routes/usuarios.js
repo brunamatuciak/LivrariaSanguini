@@ -17,28 +17,18 @@ router.get("/listar", function (req, res) {
 router.get("/consultarGeneroFantasia", function(req,res) {
     usuarioController.consultarGeneroFantasia(req, res);
 });
-router.get("/atualizarGeneroFantasia", function(req,res) {
-    usuarioController.atualizarGeneroFantasia(req, res);
-});
-
-router.get("/atualizarGeneroFantasia", function(req,res) {
-    usuarioController.atualizarGeneroFantasia(req, res);
-});
-
-
-
-
-
-
-
-
-router.get("/consultarGeneroFiccao", function(req,res) {
-    usuarioController.consultarGeneroFiccao(req, res);
-});
-
 router.get("/consultarSubgenero", function(req,res) {
     usuarioController.consultarSubgenero(req, res);
 });
+
+
+
+
+
+
+
+
+
 
 //Recebendo os dados do html e direcionando para a função cadastrar de usuarioController.js
 router.post("/cadastrar", function (req, res) {

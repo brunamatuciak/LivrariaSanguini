@@ -42,7 +42,7 @@
             <hr width="95%">
         </div>
         <div class="forms" style="display: flex;">
-            
+
             <form>
                 <div class="user-boxDash">
                     <label>Nome:</label><br>
@@ -57,7 +57,7 @@
                     <input type="text" id="email_input" required="">
                 </div>
             </form>
-            
+
             <form>
                 <div class="user-boxDash">
                     <label style="width: 40%;">Gênero favorito:</label>
@@ -67,7 +67,7 @@
                     <label style="width: 40%;">Sub-Gênero favorito:</label>
                     <input type="text" id="subGenero_input" required="">
                 </div>
-    
+
             </form>
         </div>
 
@@ -91,7 +91,7 @@
 
                 <div id="grafico2" class="display-block">
                     <h3 class="tituloGraficos">
-                        <span id="tituloSubgenero">Subgêneros favoritos</span>
+                        <span id="tituloSubgenero">Subgeneros favoritos</span>
                     </h3>
                     <div class="graph" style="width: 800px; height: 400px;">
                         <canvas id="myChartSubgenero"></canvas>
@@ -104,17 +104,22 @@
 
         </div>
 
-        <div class="tabelaRank">
-            <table>
-                <tr>
-                    <th>Livro</th>
-                    <th>Popularidade</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+        <div class="tabelaPopular">
+            <h3 class="tituloGraficos">
+                <span id="tituloGenero">Os livros mais populares</span>
+            </h3>
+            <div class="tabelaRank">
+                <table>
+                    <tr>
+                        <th>Livro</th>
+                        <th>Popularidade</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
         </div>
 
     </div>
@@ -144,10 +149,16 @@
 
     function obterDadosGraficos() {
         obterDadosGrafico(1)
-        
+
+    }
+    window.onload = obterDadosGraficoSub();
+
+    function  obterDadosGraficoSub(){
+        obterDadosGraficoSub(1)
+
     }
 
-  
+
 
 
 
@@ -168,22 +179,7 @@
 
         fetch(`/usuarios/consultarGeneroFantasia`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
-                fetch(`/usuario/consultarGeneroFiccao`, {cache: 'no-store'}).then(function (response) {
-                    if  (response.ok) {
-                        response.json().then(function (resposta) {
-                            console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                            resposta.reverse();
 
-                            plotarGrafico(resposta);
-                        });
-                    } else {
-                        console.error('Nenhum dado encontrado ou erro na API');
-                    }
-                })
-                    .catch(function (erro) {
-                        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-                    });
-                
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
@@ -214,18 +210,18 @@
         // Criando estrutura para plotar gráfico - dados
         let dadosGenero = {
             labels: labelsGenero,
-                datasets: [{
-                    label: 'Gênero favortio',
-                    data: [],
-                    backgroundColor: [
-                        '#94a7b0',
-                        '#509b95'
-                    ],
-                    color: '#ffffff',
-                    borderWidth: 4,
-                    barPercentage: 0.4
-                }]
-            
+            datasets: [{
+                label: 'Gênero favortio',
+                data: [],
+                backgroundColor: [
+                    '#94a7b0',
+                    '#509b95'
+                ],
+                color: '#ffffff',
+                borderWidth: 4,
+                barPercentage: 0.4
+            }]
+
         };
 
         console.log('----------------------------------------------')
@@ -301,78 +297,127 @@
 
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
-    function atualizarGeneroFantasia(dadosGenero, myChartGenero) {
 
-        fetch(`/usuarios/atualizarGeneroFantasia`, { cache: 'no-store' }).then(function (response) {
+
+
+    // grafico do subgenero
+
+    function obterDadosGraficoSub(idUsuario) {
+
+
+        fetch(`/usuarios/consultarSubgenero`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
-                response.json().then(function (novoRegistro) {
 
-                    // obterdados();
-                    // alertar(novoRegistro, id);
-                    console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
-                    console.log(`Dados atuais do gráfico:`);
-                    console.log(dadosGenero);
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
 
-                   
-                    
+                    plotarGraficoSubgenero(resposta);
 
-
-                    if (novoRegistro[0].genero_fantasia == dadosGenero.labels[dadosGenero.labels.length - 1]) {
-                        console.log("---------------------------------------------------------------")
-                        console.log("Como não há dadosGenero novos para captura, o gráfico não atualizará.")
-                        // avisoCaptura.innerHTML = "<i class='fa-solid fa-triangle-exclamation'></i> Foi trazido o dado mais atual capturado pelo sensor. <br> Como não há dadosGenero novos a exibir, o gráfico não atualizará."
-                        console.log("Horário do novo dado capturado:")
-                        console.log(novoRegistro[0].genero_fantasia)
-                        console.log("Horário do último dado capturado:")
-                        console.log(dadosGenero.labels[dadosGenero.labels.length - 1])
-                        console.log("---------------------------------------------------------------")
-                    } else {
-                        // tirando e colocando valores no gráfico
-                        dadosGenero.labels.shift(); // apagar o primeiro
-                        dadosGenero.labels.push(novoRegistro[0].genero_fantasia); // incluir um novo momento
-
-                        dadosGenero.datasets[0].data.shift();  // apagar o primeiro de genero
-                        dadosGenero.datasets[0].data.push(novoRegistro[0].genero); // incluir uma nova medida de genero
-
-                        
-                        // myChartGenero.update();
-                    }
-
-                    // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                    // proximaAtualizacao = setTimeout(() => atualizarGeneroFantasia(dadosGenero, myChartGenero), 2000);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
-                // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                // proximaAtualizacao = setTimeout(() => atualizarGeneroFantasia(dadosGenero, myChartGenero), 2000);
             }
         })
             .catch(function (error) {
-                console.error(`Erro na obtenção dos dadosGenero p/ gráfico: ${error.message}`);
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
-
     }
 
-// grafico do subgenero
+    function plotarGraficoSubgenero(resposta) {
 
-function obterDadosGraficoSub(idUsuario) {
+        console.log('iniciando plotagem do gráfico...');
 
 
-fetch(`/usuarios/consultarAltaFantasia`, { cache: 'no-store' }).then(function (response) {
-    if (response.ok) {
-        response.json().then(function (resposta) {
-            console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-            resposta.reverse();
+        // Criando estrutura para plotar gráfico - labels
+        let labelsSubgenero = [];
 
-            plotarGraficoSub(resposta);
+        // Criando estrutura para plotar gráfico - dados
+        let dadosSubgenero = {
+            labels: labelsSubgenero,
+            datasets: [{
+                label: 'Subgenero favortio',
+                data: [],
+                backgroundColor: [
+                '#35836d',
+                '#509b95',
+                '#76a2a8',
+                '#76a897',
+                '#94a7b0',
+                '#b0b5bb',
+                '#c8c8c8'
+                ],
+                color: '#ffffff',
+                borderWidth: 4,
+                barPercentage: 0.4
+            }]
 
-        });
-    } else {
-        console.error('Nenhum dado encontrado ou erro na API');
+        };
+
+        console.log('----------------------------------------------')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        console.log(resposta)
+
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labelsSubgenero.push(registro.subGenero);
+            dadosSubgenero.datasets[0].data.push(registro.numero_de_favorito);
+        }
+
+        console.log('----------------------------------------------')
+        console.log('O gráfico será plotado com os respectivos valores:')
+        console.log('Labels:')
+        console.log(labelsSubgenero)
+        console.log('Dados:')
+        console.log(dadosSubgenero.datasets)
+        console.log('----------------------------------------------')
+
+        // Criando estrutura para plotar gráfico - config
+        const configSubgenero = {
+            type: 'bar',
+            data: dadosSubgenero,
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            drawOnChartArea: false
+                        }
+                    },
+                    x: {
+                        grid: {
+                            drawOnChartArea: false
+                        }
+                    }
+                },
+                layout: {
+                    padding: 25
+                },
+                plugins: {
+                    legend: {
+                        display: false,
+                        labels: {
+                            font: {
+                                size: 25,
+                                family: "'Poppins', sans-serif",
+                            }
+
+                        }
+                    }
+                }
+            }
+        };
+
+        // Adicionando gráfico criado em div na tela
+        let myChartSubgenero = new Chart(
+            // document.getElementById(`myChartCanvas${id}`),
+            document.getElementById(`myChartSubgenero`),
+            configSubgenero
+        );
+        myChartSubgenero.update();
+
+        // setTimeout(() => atualizarGeneroFantasia(dadosSubgenero, myChartGenero), 2000);
     }
-})
-    .catch(function (error) {
-        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-    });
-}
 </script>

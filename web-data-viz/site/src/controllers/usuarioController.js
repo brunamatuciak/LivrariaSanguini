@@ -125,34 +125,11 @@ function consultarGeneroFantasia(req, res) {
                 }
             );
 }
-function atualizarGeneroFantasia(req, res) {
-   
 
+function consultarSubgenero(req, res) {
     console.log('DENTRO DA CONTROLLER')
 
-    usuarioModel.atualizarGeneroFantasia()
-            .then(
-                function (resultado) {
-                    res.json(resultado);
-                }
-            ).catch(
-                function (erro) {
-                    console.log(erro);
-                    console.log(
-                        "\nHouve um erro ao realizar o cadastro! Erro: ",
-                        erro.sqlMessage
-                    );
-                    res.status(500).json(erro.sqlMessage);
-                }
-            );
-}
-
-function consultarGeneroFiccao(req, res) {
-
-
-    console.log('DENTRO DA CONTROLLER')
-
-    usuarioModel.consultarGeneroFiccao()
+    usuarioModel.consultarSubgenero()
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -176,6 +153,5 @@ module.exports = {
     listar,
     testar,
     consultarGeneroFantasia,
-    atualizarGeneroFantasia,
-    consultarGeneroFiccao
+    consultarSubgenero
 }
