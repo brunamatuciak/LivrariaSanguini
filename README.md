@@ -1,8 +1,8 @@
 
 
-<h2>Livraria Sanguini  🥰</h2>
+<h2>Livraria Sanguini 📚</h2>
 <h4 align="center"> 
-	🚧 Site em desenvolvimento 🚧
+	🗸 Projeto Concluído 🗸
 </h4>
 
 <p align="center">
