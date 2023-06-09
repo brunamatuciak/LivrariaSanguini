@@ -270,7 +270,7 @@
 
         var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
 
-        var divResultado = document.getElementById("div_feed");
+        var divResultado = document.ElementById("div_feed");
 
         divResultado.appendChild(document.createTextNode(formulario.get("descricao")));
         divResultado.innerHTML = formulario.get("descricao");

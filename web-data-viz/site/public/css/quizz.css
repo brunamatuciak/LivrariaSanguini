@@ -68,7 +68,7 @@
 
 .containerQuizzResul{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     color: #fff;
     font-family: var(--fontePrincipal);
     font-size: 36px;
@@ -88,4 +88,17 @@
     font-family: var(--fontePrincipal);
     font-size: 22px;
     margin-bottom: 5%;
+}
+
+.containerQuizzResulFavorito{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-family: var(--fontePrincipal);
+    font-size: 36px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    margin-left: 8%;
 }

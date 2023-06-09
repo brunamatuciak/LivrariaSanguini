@@ -494,7 +494,7 @@ function mostrar(idLivro) {
 
             titulo.innerHTML = jsonLivros[i].titulo;
             urlImg.src = "./img/imgCapaLivros/" + jsonLivros[i].urlImg;
-            urlImgInfo.src = "./img/imgInfoLivros/" + jsonLivros[i].urlImgInfo;
+            // urlImgInfo.src = "./img/imgInfoLivros/" + jsonLivros[i].urlImgInfo;
             genero.innerHTML = jsonLivros[i].genero;
             subGenero.innerHTML = jsonLivros[i].subGenero;
             trechoDoLivro.innerHTML = jsonLivros[i].trechoDoLivro;
@@ -505,25 +505,25 @@ function mostrar(idLivro) {
 }
 
 
-function mostrar(idGrafico) {
+// function mostrar(idGrafico) {
     
-    for (var i = 0; i < vt_grafico.length; i++) {
-        if (vt_grafico[i].id == idGrafico) {
-            console.log(vt_grafico[i].titulo);
+//     for (var i = 0; i < vt_grafico.length; i++) {
+//         if (vt_grafico[i].id == idGrafico) {
+//             console.log(vt_grafico[i].titulo);
 
 
-            container.style = "display: none";
-            mostrarLivro.style = "display: block";
+//             container.style = "display: none";
+//             mostrarLivro.style = "display: block";
 
 
-            titulo.innerHTML = vt_grafico[i].titulo;
-            urlImg.src = "./img/imgCapaLivros/" + vt_grafico[i].urlImg;
-            urlImgInfo.src = "./img/imgInfoLivros/" + vt_grafico[i].urlImgInfo;
-            genero.innerHTML = vt_grafico[i].genero;
-            subGenero.innerHTML = vt_grafico[i].subGenero;
-            trechoDoLivro.innerHTML = vt_grafico[i].trechoDoLivro;
-            comentario1.innerHTML = vt_grafico[i].comentario1;
-            comentario2.innerHTML = vt_grafico[i].comentario2;
-        }
-    }
-}
+//             titulo.innerHTML = vt_grafico[i].titulo;
+//             urlImg.src = "./img/imgCapaLivros/" + vt_grafico[i].urlImg;
+//             urlImgInfo.src = "./img/imgInfoLivros/" + vt_grafico[i].urlImgInfo;
+//             genero.innerHTML = vt_grafico[i].genero;
+//             subGenero.innerHTML = vt_grafico[i].subGenero;
+//             trechoDoLivro.innerHTML = vt_grafico[i].trechoDoLivro;
+//             comentario1.innerHTML = vt_grafico[i].comentario1;
+//             comentario2.innerHTML = vt_grafico[i].comentario2;
+//         }
+//     }
+// }

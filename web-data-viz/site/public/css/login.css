@@ -68,12 +68,13 @@ body {
     font-size: 12px;
 }
 
+
 .login-box button {
     border: none;
     background-color: transparent;
 }
 
-.login-box form a {
+.login-box .form a {
     position: relative;
     padding: 10px 20px;
     color: var(--corSecundaria);
@@ -121,9 +122,9 @@ body {
 }
 
 .cadastroPreferencia select{
-    background-color:  rgba(42, 57, 31, 0.5);
+    background-color:  var(--corPrincipal) rgba(0, 0, 0, .5);
     color: #F5F1E6;
-    border: none;
+    border: 1px solid var(--corSecundaria);
     font-size: 16px;
     font-family: var(--fontePrincipal);
 }

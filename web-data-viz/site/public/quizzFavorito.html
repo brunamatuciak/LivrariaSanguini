@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/quizz.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/funcoes.js"></script>
     <script src="./js/main.js"></script>
     <title>Livraria Sanguini</title>
 </head>
+
 <body>
 
     <div class="corFundo">
@@ -21,114 +24,118 @@
                 <div class="dropdown">
                     <button class="dropbtn">Gênero</button>
                     <div class="dropdown-content">
-                        <a href="./fantasia.html" >Fantasia</a>
-                        <a href="./ficcao.html" >Ficção Científica</a>
+                        <a href="./fantasia.html">Fantasia</a>
+                        <a href="./ficcao.html">Ficção Científica</a>
                     </div>
                 </div>
-                <p><a href="quizz.html" >Quizz</a></p>
+                <p><a href="quizz.html">Quizz</a></p>
                 <p><a href="./index.html#sobreMim">Sobre</a></p>
             </div>
             <div class="cadastroLogin">
-                <p><a href="cadastro.html" >Cadastro</a></p>
+                <p><a href="cadastro.html">Cadastro</a></p>
                 <hr style="height: 8vh;">
-                <p><a href="login.html" >Login</a></p>
+                <p><a href="login.html">Login</a></p>
             </div>
 
         </div>
-        
+
         <div id="container" class="containertudo">
 
-            <div class="tituloFavorito" >
+            <div class="tituloFavorito">
                 <p>Já leu Flores para Algernon?</p>
                 <hr width="95%">
-                <p style="font-size: 15px;">Responda algumas perguntas e teste se realmente é fã de um dos livros mais cobiçados da ficção científica!</p>
+                <p style="font-size: 15px;">Responda algumas perguntas e teste se realmente é fã de um dos livros mais
+                    cobiçados da ficção científica!</p>
             </div>
 
             <div class="caixaMensagemQuizz">
-                <p>"O problema, querido professor, é que você queria alguém que pudesse se tornar inteligente, mas continuasse numa jaula e fosse exibido, quando necessário, para colher as honras que você busca. O problema é que sou uma pessoa"</p>
+                <p>"O problema, querido professor, é que você queria alguém que pudesse se tornar inteligente, mas
+                    continuasse numa jaula e fosse exibido, quando necessário, para colher as honras que você busca. O
+                    problema é que sou uma pessoa"</p>
             </div>
 
             <button onclick="comecarQuizz()" class="btnQuizz">Começar o quizz</button>
 
             <div id="divQuizz" style="display: none;">
-            
+
                 <div id="pergunta1">
-                    
-                
+
+
                 </div>
                 <div id="pergunta2" style="display: none;">
-                   
+
                 </div>
                 <div id="pergunta3" style="display: none;">
-                    
+
                 </div>
-                <div id="pergunta4" style="display: none;"> 
-                   
+                <div id="pergunta4" style="display: none;">
+
                 </div>
                 <div id="pergunta5" style="display: none;">
-                    
+
                 </div>
-            
-            
-            
+
+
+
             </div>
 
             <div id="quizzResultado" style="display: none;">
-                    
 
-                        <div class="tituloLivroResultado">
-                            <span id="titulo"></span>
-                            
-                        </div>
-                        <div>
-                            <img id="urlImg" class="imgLivroResultado">
-                        </div>
-                    
+
+                <div class="tituloLivroResultado">
+                    <span id="titulo"></span>
+
+                </div>
+                <div>
+                    <img id="urlImg" class="imgLivroResultado">
+                </div>
+
             </div>
 
         </div>
 
-       
+
 
         <footer>
             <div class="containerFooter" style="margin-right: 1%;">
                 <img src="./img/LogoFooter.png" alt="logo" width="70%">
             </div>
-    
+
             <ul style="margin-top: 3%; margin-right: 1%;">
                 <li style="font-size: 25px; margin-bottom: 2%;">Navegação</li>
                 <hr style="margin-bottom: 5%;">
                 <li><a href=""></a>Gênero</li>
-                <li style="margin-left: 30px; font-size: 18px;"><a href="./fantasia.html" ></a>Fantasia</li>
-                <li style="margin-left: 30px; font-size: 18px;"><a href="./ficcao.html" ></a>Ficção Científica</li>
-                <li><a href="./quizz.html" ></a>Quizz</li>
-                <li><a href="./index.html" ></a>Sobre</li>
-                <li><a href="./login.html" ></a>Login</li>
+                <li style="margin-left: 30px; font-size: 18px;"><a href="./fantasia.html"></a>Fantasia</li>
+                <li style="margin-left: 30px; font-size: 18px;"><a href="./ficcao.html"></a>Ficção Científica</li>
+                <li><a href="./quizz.html"></a>Quizz</li>
+                <li><a href="./index.html"></a>Sobre</li>
+                <li><a href="./login.html"></a>Login</li>
             </ul>
-    
+
             <div class="minhasInfo">
                 <div class="tituloFooter" style="display: flex; flex-direction: column;">
                     <p style="font-size: 25px; margin-bottom: 2%;">Nossas redes sociais </p>
                     <hr style="margin-bottom: 5%;">
                 </div>
                 <div class="imgRedes" style="display: flex; align-items: center;">
-                    <a href="https://www.instagram.com/bru.sanguini/" ><img src="./img/instagram.png" width="40px"></a>
-                    <a href="https://www.linkedin.com/in/brunasanguini/" ><img src="./img/linkedin.png" width="41px"></a>
+                    <a href="https://www.instagram.com/bru.sanguini/"><img src="./img/instagram.png" width="40px"></a>
+                    <a href="https://www.linkedin.com/in/brunasanguini/"><img src="./img/linkedin.png" width="41px"></a>
                 </div>
             </div>
-    
+
         </footer>
 
     </div>
 </body>
+
 </html>
 
 <script>
     //variáveis de fantasia
     var acerto = Number(0);
     var erro = Number(0);
-    
-    
+
+
     var ganhadorVarVar = "";
 
     var resp1A = "";
@@ -148,12 +155,16 @@
             </div>
             `
 
-        // } else {
-        //     alert('Por favor logue antes!')
-        // }
+    //     } else {
+    //         Swal.fire({
+    //             icon: 'error',
+    //             title: 'Oops...',
+    //             text: 'Por favor se logue antes',
+    //         })
+    //     }
     }
 
-    
+
 
     var texto2a = "";
     var texto2b = "";
@@ -170,7 +181,7 @@
             acerto++
 
         }
-       
+
         pergunta2.style = "display: block";
         pergunta2.innerHTML = `
         <div class="pQuizz">Qual era o QI de Charlie antes da cirurgia?</div>
@@ -194,7 +205,7 @@
             texto2b = "Alice"
             erro++
         }
-        
+
         pergunta3.style = "display: block";
         pergunta3.innerHTML = `
         <div class="pQuizz">Por quem Charlie se apaixona durante a história?</div>
@@ -207,21 +218,21 @@
     }
 
     function perguntaQuizz3(resposta3) {
-        
-        if (resposta3 == "Fay")  {
+
+        if (resposta3 == "Fay") {
             texto2a = "Jogo de Labirinto"
             texto2b = "Jogo de cartas"
             erro++
-            
+
         }
-        if (resposta3 == "Alice"){
+        if (resposta3 == "Alice") {
             texto2a = "Jogo de Labirinto"
             texto2b = "Jogo de cartas"
-            acerto++           
+            acerto++
 
         }
 
-        
+
         pergunta4.style = "display: block";
         pergunta4.innerHTML = `
         <div class="pQuizz">Qual era o jogo que Algernon e Charlie competiam:</div>
@@ -233,23 +244,23 @@
         `
     }
     function perguntaQuizz4(resposta4) {
-        
+
         if (resposta4 == "Jogo de cartas") {
             texto2a = "Escola da Residência Warren"
             texto2b = "Lar Smith"
             erro++;
-        
-            
+
+
         }
         if (resposta4 == "Jogo de Labirinto") {
             texto2a = "Escola da Residência Warren"
             texto2b = "Lar Smith"
             acerto++;
-           
+
 
         }
-        
-        
+
+
         pergunta5.style = "display: block";
         pergunta5.innerHTML = `
         <div class="pQuizz">Onde Charlie acaba morando no final do romance?:</div>
@@ -263,19 +274,19 @@
     function perguntaQuizz5(resposta5) {
         divQuizz.style = "display:none";
         quizzResultado.style = "display:block";
-        
-       
-        if (resposta5 == "Lar Smith"){
+
+
+        if (resposta5 == "Lar Smith") {
             erro++;
         }
-        
-        if (resposta5 == "Escola da Residência Warren"){
+
+        if (resposta5 == "Escola da Residência Warren") {
             acerto++
         }
-        
+
         if (acerto <= 2) {
             quizzResultado.innerHTML = `
-            <div class="containerQuizzResul">
+            <div class="containerQuizzResulFavorito">
                
                      <div class="pQuizzResultado">Seu resultado foi: <br>
                     ${acerto} / 5</div>
@@ -286,7 +297,7 @@
         }
         if (acerto == 3) {
             quizzResultado.innerHTML = `
-            <div class="containerQuizzResul">
+            <div class="containerQuizzResulFavorito">
                
                      <div class="pQuizzResultado">Seu resultado foi: <br>
                     ${acerto} / 5</div>
@@ -297,7 +308,7 @@
         }
         if (acerto == 4) {
             quizzResultado.innerHTML = `
-            <div class="containerQuizzResul">
+            <div class="containerQuizzResulFavorito">
                
                      <div class="pQuizzResultado">Seu resultado foi: <br>
                     ${acerto} / 5</div>
@@ -308,7 +319,7 @@
         }
         if (acerto == 5) {
             quizzResultado.innerHTML = `
-            <div class="containerQuizzResul">
+            <div class="containerQuizzResulFavorito">
                
                      <div class="pQuizzResultado">Seu resultado foi: <br>
                     ${acerto} / 5</div>
@@ -318,15 +329,15 @@
 
         }
     }
-       
+
 
     function cadastrarResultado() {
-        
+
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fe//tch logo abaixo
-        
-        
-    
+
+
+
         // Enviando o valor da nova input
         fetch("/quizz/cadastrarQuizz", {
             method: "POST",
@@ -338,14 +349,14 @@
                 // Agora vá para o arquivo routes/usuario.js
                 fkUsuarioServer: ID_USUARIO,
                 fkLivroServer: ganhadorVar,
-                
+
 
             })
         }).then(function (resposta) {
 
             console.log("resposta: ", resposta);
 
-           
+
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
             // finalizarAguardar();
