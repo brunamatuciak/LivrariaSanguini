@@ -12,12 +12,13 @@
 </p>
 
 
-![image](https://user-images.githubusercontent.com/125585854/235464033-69b5254b-d714-4365-8090-90854d1bea85.png)
+
+![image](https://github.com/brunamatuciak/LivrariaSanguini/assets/125585854/7b1f000b-b3b9-421d-a06b-b4703567006f)
 
 
 ## 📚 Sobre o projeto
 
-<p>O site Livraria Sanguini é um projeto para o curso de Ciência da Computação na faculdade SpTech, em que o objetivo é criar um tema baseado em algo que você goste e se identifica. O assunto do site é sobre livros, girando em torno dos gêneros de Ficção Científica e Fantasia que são os meus preferidos atualmente, espero com esse projeto melhorar minhas aptidões na linguagens de programações requeridas e conseguir mostrar um pouco de todos os mundos os quais já visitei.</p>
+<p>O site Livraria Sanguini é um projeto para o curso de Ciência da Computação na faculdade SpTech, em que o objetivo é criar um tema baseado em algo que você goste e se identifica. O assunto do site é sobre livros, girando em torno dos gêneros de Ficção Científica e Fantasia que são os meus preferidos atualmente, espero que esse projeto melhorar minhas aptidões na linguagens de programações requeridas e que eu consiga mostrar um pouco de todos os mundos os quais já visitei.</p>
 
 ## Linguagens utilizadas
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
