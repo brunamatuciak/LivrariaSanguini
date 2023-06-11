@@ -1,138 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/login.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/funcoes.js"></script>
-    <title>Livraria Sanguini</title>
-  </head>
 
-  <body>
-    <div class="corFundo">
-      <div class="header" style="width: 100%">
-        <div class="logo">
-          <a href="./index.html"
-            ><img src="./img/novoLogo.png" alt="logo do site" width="70%"
-          /></a>
-        </div>
-        <div class="menuHeader">
-          <div class="dropdown">
-            <button class="dropbtn">Gênero</button>
-            <div class="dropdown-content">
-              <a href="./fantasia.html">Fantasia</a>
-              <a href="./ficcao.html">Ficção Científica</a>
-            </div>
-          </div>
-          <p><a href="quizz.html">Quizz</a></p>
-          <p><a href="./index.html#sobreMim">Sobre</a></p>
-        </div>
-        <div class="cadastroLogin">
-          <p><a href="cadastro.html">Cadastro</a></p>
-          <hr style="height: 8vh" />
-          <p><a href="login.html">Login</a></p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/login.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./js/funcoes.js"></script>
+  <title>Livraria Sanguini</title>
+</head>
+
+<body>
+  <div class="corFundo">
+    <div class="header" style="width: 100%">
+      <div class="logo">
+        <a href="./index.html"><img src="./img/novoLogo.png" alt="logo do site" width="70%" /></a>
       </div>
-      <div class="alerta_erro">
-        <div class="card_erro" id="cardErro">
-          <span id="mensagem_erro"></span>
+      <div class="menuHeader">
+        <div class="dropdown">
+          <button class="dropbtn">Gênero</button>
+          <div class="dropdown-content">
+            <a href="./fantasia.html">Fantasia</a>
+            <a href="./ficcao.html">Ficção Científica</a>
+          </div>
         </div>
+        <p><a href="quizz.html">Quizz</a></p>
+        <p><a href="./index.html#sobreMim">Sobre</a></p>
       </div>
-
-      <div class="login-box">
-        <h2>Cadastro</h2>
-        <div class="form">
-          <div class="user-box">
-            <input type="text" name="" id="nome_input" />
-            <label>Nome completo</label>
-          </div>
-          <div class="user-box">
-            <input type="text" name="" id="email_input" />
-            <label>Email</label>
-          </div>
-          <div class="user-box">
-            <input type="password" name="" id="senha_input" />
-            <label>Senha</label>
-          </div>
-          <div class="user-box">
-            <input type="password" name="" id="confirmacao_senha_input" />
-            <label>Confirmar senha</label>
-          </div>
-
-          <div class="cadastroPreferencia">
-            <p>Você prefere o gênero:</p>
-
-            <select id="sel_Genero">
-              <option>Selecione</option>
-              <option value="Ficção Científica">Ficção Científica</option>
-              <option value="Fantasia">Fantasia</option>
-            </select>
-          </div>
-          <div class="cadastroPreferencia">
-            <p>Você prefere qual subgênero:</p>
-
-            <select id="sel_Subgenero">
-              <option>Selecione</option>
-              <option value="Alta Fantasia">Alta Fantasia</option>
-              <option value="Baixa Fantasia">Baixa Fantasia</option>
-              <option value="Fantasia Mitologica">Fantasia Mitologica</option>
-              <option value="CyberPunk">CyberPunk</option>
-              <option value="Imperio Galatico">Imperio Galatico</option>
-              <option value="Space Opera">Space Opera</option>
-              <option value="Universo Paralelo">Universo Paralelo</option>
-            </select>
-          </div>
-
-          <div>
-            <button onclick="cadastrar()"><a>Cadastrar</a></button>
-          </div>
-        </div>
+      <div class="cadastroLogin">
+        <p><a href="cadastro.html">Cadastro</a></p>
+        <hr style="height: 8vh" />
+        <p><a href="login.html">Login</a></p>
       </div>
-
-      <footer>
-        <div class="containerFooter" style="margin-right: 1%">
-          <img src="./img/LogoFooter.png" alt="logo" width="70%" />
-        </div>
-
-        <ul style="margin-top: 3%; margin-right: 1%">
-          <li style="font-size: 25px; margin-bottom: 2%">Navegação</li>
-          <hr style="margin-bottom: 5%" />
-          <li><a href=""></a>Gênero</li>
-          <li style="margin-left: 30px; font-size: 18px">
-            <a href="./fantasia.html"></a>Fantasia
-          </li>
-          <li style="margin-left: 30px; font-size: 18px">
-            <a href="./ficcao.html"></a>Ficção Científica
-          </li>
-          <li><a href="./quizz.html"></a>Quizz</li>
-          <li><a href="./index.html"></a>Sobre</li>
-          <li><a href="./login.html"></a>Login</li>
-        </ul>
-
-        <div class="minhasInfo">
-          <div
-            class="tituloFooter"
-            style="display: flex; flex-direction: column"
-          >
-            <p style="font-size: 25px; margin-bottom: 2%">
-              Nossas redes sociais
-            </p>
-            <hr style="margin-bottom: 5%" />
-          </div>
-          <div class="imgRedes" style="display: flex; align-items: center">
-            <a href="https://www.instagram.com/bru.sanguini/"
-              ><img src="./img/instagram.png" width="40px"
-            /></a>
-            <a href="https://www.linkedin.com/in/brunasanguini/"
-              ><img src="./img/linkedin.png" width="41px"
-            /></a>
-          </div>
-        </div>
-      </footer>
     </div>
-  </body>
+    <div class="alerta_erro">
+      <div class="card_erro" id="cardErro">
+        <span id="mensagem_erro"></span>
+      </div>
+    </div>
+
+    <div class="login-box">
+      <h2>Cadastro</h2>
+      <div class="form">
+        <div class="user-box">
+          <input type="text" name="" id="nome_input" />
+          <label>Nome completo</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="" id="email_input" />
+          <label>Email</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="" id="senha_input" />
+          <label>Senha</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="" id="confirmacao_senha_input" />
+          <label>Confirmar senha</label>
+        </div>
+
+        <div class="cadastroPreferencia">
+          <p>Você prefere o gênero:</p>
+
+          <select id="sel_Genero">
+            <option>Selecione</option>
+            <option value="Ficção Científica">Ficção Científica</option>
+            <option value="Fantasia">Fantasia</option>
+          </select>
+        </div>
+        <div class="cadastroPreferencia">
+          <p>Você prefere qual subgênero:</p>
+
+          <select id="sel_Subgenero">
+            <option>Selecione</option>
+            <option value="Alta Fantasia">Alta Fantasia</option>
+            <option value="Baixa Fantasia">Baixa Fantasia</option>
+            <option value="Fantasia Mitologica">Fantasia Mitologica</option>
+            <option value="CyberPunk">CyberPunk</option>
+            <option value="Imperio Galatico">Imperio Galatico</option>
+            <option value="Space Opera">Space Opera</option>
+            <option value="Universo Paralelo">Universo Paralelo</option>
+          </select>
+        </div>
+
+        <div>
+          <button onclick="cadastrar()"><a>Cadastrar</a></button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="containerFooter" style="margin-right: 1%">
+        <img src="./img/LogoFooter.png" alt="logo" width="70%" />
+      </div>
+
+      <ul style="margin-top: 3%; margin-right: 1%">
+        <li style="font-size: 25px; margin-bottom: 2%">Navegação</li>
+        <hr style="margin-bottom: 5%" />
+        <li><a href=""></a>Gênero</li>
+        <li style="margin-left: 30px; font-size: 18px">
+          <a href="./fantasia.html"></a>Fantasia
+        </li>
+        <li style="margin-left: 30px; font-size: 18px">
+          <a href="./ficcao.html"></a>Ficção Científica
+        </li>
+        <li><a href="./quizz.html"></a>Quizz</li>
+        <li><a href="./index.html"></a>Sobre</li>
+        <li><a href="./login.html"></a>Login</li>
+      </ul>
+
+      <div class="minhasInfo">
+        <div class="tituloFooter" style="display: flex; flex-direction: column">
+          <p style="font-size: 25px; margin-bottom: 2%">
+            Nossas redes sociais
+          </p>
+          <hr style="margin-bottom: 5%" />
+        </div>
+        <div class="imgRedes" style="display: flex; align-items: center">
+          <a href="https://www.instagram.com/bru.sanguini/"><img src="./img/instagram.png" width="40px" /></a>
+          <a href="https://www.linkedin.com/in/brunasanguini/"><img src="./img/linkedin.png" width="41px" /></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>
 
 <script>
@@ -147,53 +141,85 @@
     var generoVar = sel_Genero.value;
     var subGeneroVar = sel_Subgenero.value;
 
+    var email1 = emailVar.indexOf('@');
+    var email2 = emailVar.indexOf('.');
+    var erro = false;
+
     document.getElementsByName("").value;
-    // if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-    //     cardErro.style.display = "block"
-    //     mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
-    //     // finalizarAguardar();
-    //     return false;
-    // }
-
-    // if(ipt_fantasia.value == 1) {
-    //     genero = "Fantasia"
-    // }
-    // if(ipt_ficcao.value == 1) {
-    //     genero = "Ficção Cienifica"
-    // }
-
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-        generoServer: generoVar,
-        subGeneroServer: subGeneroVar,
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
-
-        if (resposta.ok) {
-          
-          window.location = "login.html";
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
+    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || generoVar == "" || subGeneroVar == "") {
+      Swal.fire({
+        icon: 'error',
+        title: 'Cadastro não realizado',
+        text: 'Por favor prencha todos os campos',
       })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        // finalizarAguardar();
-      });
+      erro = true;
+    }
+    else if (email1 == -1 || email2 == -1) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Cadastro não realizado',
+        text: 'Verifique se o campo email está correto',
+      })
+      erro = true;
+    }
+    else if (senhaVar.length <= 4) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Cadastro não realizado',
+        text: 'A senha precisa ter no mínimo 5 caracteres',
+      })
 
-    return false;
+      erro = true;
+    }
+    else if (senhaVar != confirmacaoSenhaVar) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Cadastro não realizado',
+        text: 'A senha e confirmação de senha não são as mesmas',
+      })
+      console.log('oi')
+      erro = true;
+    }
+    if (erro == false) {
+
+      // Enviando o valor da nova input
+      fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          nomeServer: nomeVar,
+          emailServer: emailVar,
+          senhaServer: senhaVar,
+          generoServer: generoVar,
+          subGeneroServer: subGeneroVar,
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+
+          if (resposta.ok) {
+            Swal.fire('Cadastro realizado com sucesso!')
+            setTimeout(function () {
+              window.location = "login.html";
+                }, 3000)
+          
+          } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+          }
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+          // finalizarAguardar();
+        });
+
+      return false;
+    }
   }
+
+
 </script>

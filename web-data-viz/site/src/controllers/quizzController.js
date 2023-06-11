@@ -21,7 +21,7 @@ function listarLivroQuizz(req, res) {
 
 
 
-function cadastrarResultado(res,res) {
+function cadastrarResultado(req ,res) {
     var fkUsuario = req.body.fkUsuarioServer;
     var fkLivro = req.body.fkLivroServer;
 

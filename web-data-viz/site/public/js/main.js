@@ -454,35 +454,6 @@ jsonLivros = [{
 
 
 function mostrar(idLivro) {
-    // fetch(`/livros/consultar/${idLivro}`).then(function (response) {
-    //     if (response.ok) {
-    //         response.json().then(function (resposta) {
-    //             console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-    //             alert(JSON.stringify(resposta))
-
-    //             container.style = "display: none";
-    //             mostrarLivro.style = "display: block";
-    
-    
-    //             titulo.innerHTML = resposta[0].titulo;
-    //             urlImg.src = "./img/imgCapaLivros/" + resposta[0].urlImg;
-    //             urlImgInfo.src = "./img/imgInfoLivros/" + resposta[0].urlImgInfo;
-    //             genero.innerHTML = resposta[0].genero;
-    //             subGenero.innerHTML = resposta[0].subGenero;
-    //             trechoDoLivro.innerHTML = resposta[0].trechoDoLivro;
-    //             comentario1.innerHTML = resposta[0].comentario1;
-    //             comentario2.innerHTML = resposta[0].comentario2;
-
-               
-                
-    //         });
-    //     } else {
-    //         console.error('Nenhum dado encontrado ou erro na API');
-    //     }
-    // })
-    //     .catch(function (error) {
-    //         console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-    //     });
     for (var i = 0; i < jsonLivros.length; i++) {
         if (jsonLivros[i].id == idLivro) {
             console.log(jsonLivros[i].titulo);

@@ -67,6 +67,10 @@
                     <label style="width: 40%;">Sub-Gênero favorito:</label>
                     <input type="text" id="subGenero_input" required="">
                 </div>
+                <!-- <div class="user-boxDash">
+                    <label style="width: 40%;">Último resultado do quizz:</label>
+                    <input type="text" id="resulQuizz_input" required="">
+                </div> -->
 
             </form>
         </div>
@@ -104,7 +108,7 @@
 
         </div>
 
-        <div class="tabelaPopular">
+        <!-- <div class="tabelaPopular">
             <h3 class="tituloGraficos">
                 <span id="tituloGenero">Os livros mais populares</span>
             </h3>
@@ -148,7 +152,7 @@
                     </tr>
                 </table>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
@@ -165,6 +169,10 @@
     senha_input.value = sessionStorage.getItem('SENHA_USUARIO');
     genero_input.value = sessionStorage.getItem('GENERO_USUARIO');
     subGenero_input.value = sessionStorage.getItem('SUBGENERO_USUARIO');
+    var data = sessionStorage.getItem('varLivro');
+
+    resulQuizz_input.value = data
+
 
 </script>
 

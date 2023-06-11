@@ -16,11 +16,21 @@ create table usuario (
     );
     
 create table quizz (
+	idQuizz int primary key auto_increment,
 	fkUsuario int,
     foreign key (fkUsuario) references usuario (idUsuario),
     fkLivro int,
     foreign key (fkLivro) references Livros (id)
     );
+    
+create table QuizzFavortio (
+	idQuizzFavorito int primary key auto_increment,
+    acertos char(1),
+    fkLivroFavorito int,
+    foreign key (fkLivroFavorito) references livros(id)
+    );
+    
+    
     
 insert into Livros values 
 	(1, 'O fim da eternidade'),
@@ -33,6 +43,24 @@ insert into Livros values
     (20, 'O Jogador nº1');
     
 select * from usuario;
+select * from Livros;
+select * from quizz;
 
---  SELECT count(genero) as 'genero_fantasia' from usuario where genero = 'Fantasia';
- SELECT genero, count(genero) as 'numero_de_favoritos' from usuario GROUP BY genero;
+desc usuario;
+desc livros;
+desc quizz;
+
+select * from usuario join quizz on idUsuario = fkUsuario;
+select * from livros join quizz on id = fkLivro;
+
+select * from usuario join quizz on idUsuario = fkUsuario
+					  join livros on id = fkLivro;
+
+-- utilizado na Model do Usuario
+
+SELECT * FROM usuario WHERE email = '${email}' AND senha = '${senha}';
+INSERT INTO usuario (nome, email, senha, genero, subGenero) VALUES ('${nome}', '${email}', '${senha}', '${genero}', '${subGenero}'); 
+SELECT genero, count(genero) as 'numero_de_favoritos' from usuario GROUP BY genero;
+SELECT subGenero, count(subGenero) as 'numero_de_favorito' from usuario GROUP BY subGenero;
+
+

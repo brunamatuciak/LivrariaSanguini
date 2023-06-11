@@ -10,8 +10,8 @@ router.get("/listarLivroQuizz", function (req, res) {
     quizzController.listarLivroQuizz(req, res);
 });
 
-router.post("/cadastrarResultado", function (req,res) {
-    quizzController.cadastrarResultado(req, res)
-})
 
+router.post("/cadastrarResultado", function (req, res) {
+    quizzController.cadastrarResultado(req, res);
+})
 module.exports = router;

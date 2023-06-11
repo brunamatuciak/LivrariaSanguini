@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <script src="./js/main.js"></script>
     <title>Livraria Sanguini</title>
 </head>
+
 <body>
 
     <div class="corFundo">
@@ -22,69 +24,73 @@
                 <div class="dropdown">
                     <button class="dropbtn">Gênero</button>
                     <div class="dropdown-content">
-                        <a href="./fantasia.html" >Fantasia</a>
-                        <a href="./ficcao.html" >Ficção Científica</a>
+                        <a href="./fantasia.html">Fantasia</a>
+                        <a href="./ficcao.html">Ficção Científica</a>
                     </div>
                 </div>
-                <p><a href="quizz.html" >Quizz</a></p>
+                <p><a href="quizz.html">Quizz</a></p>
                 <p><a href="./index.html#sobreMim">Sobre</a></p>
             </div>
             <div class="cadastroLogin">
-                <p><a href="cadastro.html" >Cadastro</a></p>
+                <p><a href="cadastro.html">Cadastro</a></p>
                 <hr style="height: 8vh;">
-                <p><a href="login.html" >Login</a></p>
+                <p><a href="login.html">Login</a></p>
+                <hr style="height: 8vh;">
+                <p><a href="dashboard.html">Perfil</a></p>
             </div>
 
         </div>
-        
+
         <div id="container" class="containertudo">
 
-            <div class="tituloFavorito" >
+            <div class="tituloFavorito">
                 <p>Nunca ficou tão fácil escolher seu próximo livro!</p>
                 <hr width="95%">
-                <p style="font-size: 15px;">Responda algumas perguntas e no final iremos indicar o seu próximo livro favortio!</p>
+                <p style="font-size: 15px;">Responda algumas perguntas e no final iremos indicar o seu próximo livro
+                    favortio!</p>
             </div>
 
             <div class="caixaMensagemQuizz">
-                <p>Entre mundos distópicos, utopias, dragões e robôs, a ficção científica há muito que preenche o nosso imaginário. De Júlio Verne, a H.G.Wells e Carl Sagan, este quiz é uma viagem ao futuro.</p>
+                <p>Entre mundos distópicos, utopias, dragões e robôs, a ficção científica há muito que preenche o nosso
+                    imaginário. De Júlio Verne, a H.G.Wells e Carl Sagan, este quiz é uma viagem ao futuro.</p>
             </div>
 
             <button onclick="comecarQuizz()" class="btnQuizz">Começar o quizz</button>
 
             <div id="divQuizz" style="display: none;">
-            
+
                 <div id="pergunta1">
-                    
-                
+
+
                 </div>
                 <div id="pergunta2" style="display: none;">
-                   
+
                 </div>
                 <div id="pergunta3" style="display: none;">
-                    
+
                 </div>
-                <div id="pergunta4" style="display: none;"> 
-                   
+                <div id="pergunta4" style="display: none;">
+
                 </div>
                 <div id="pergunta5" style="display: none;">
-                    
+
                 </div>
-            
-            
-            
+
+
+
             </div>
 
             <div id="quizzResultado" style="display: none;">
-                    
 
-                        <div class="tituloLivroResultado">
-                            <span id="titulo"></span>
-                            
-                        </div>
-                        <div>
-                            <img id="urlImg" class="imgLivroResultado">
-                        </div>
-                    
+
+                <div class="tituloLivroResultado">
+                    <span id="titulo"></span>
+
+                </div>
+                <div>
+                    <img id="urlImg" class="imgLivroResultado">
+                </div>
+
             </div>
 
         </div>
@@ -99,7 +105,8 @@
                     <div class="filtrosMostrar">
                         <div id="genero" class="filtrosLivrosMostrar"></div>
                         <div id="subGenero" class="filtrosLivrosMostrar"></div>
-                        <div class="filtrosLivrosMostrarImg"><a href="./quizz.html"><img src="./img/setaVoltar.png"></a></div>
+                        <div class="filtrosLivrosMostrarImg"><a href="./quizz.html"><img src="./img/setaVoltar.png"></a>
+                        </div>
                     </div>
 
                     <div class="tituloLivroMostrar">
@@ -134,33 +141,34 @@
             <div class="containerFooter" style="margin-right: 1%;">
                 <img src="./img/LogoFooter.png" alt="logo" width="70%">
             </div>
-    
+
             <ul style="margin-top: 3%; margin-right: 1%;">
                 <li style="font-size: 25px; margin-bottom: 2%;">Navegação</li>
                 <hr style="margin-bottom: 5%;">
                 <li><a href=""></a>Gênero</li>
-                <li style="margin-left: 30px; font-size: 18px;"><a href="./fantasia.html" ></a>Fantasia</li>
-                <li style="margin-left: 30px; font-size: 18px;"><a href="./ficcao.html" ></a>Ficção Científica</li>
-                <li><a href="./quizz.html" ></a>Quizz</li>
-                <li><a href="./index.html" ></a>Sobre</li>
-                <li><a href="./login.html" ></a>Login</li>
+                <li style="margin-left: 30px; font-size: 18px;"><a href="./fantasia.html"></a>Fantasia</li>
+                <li style="margin-left: 30px; font-size: 18px;"><a href="./ficcao.html"></a>Ficção Científica</li>
+                <li><a href="./quizz.html"></a>Quizz</li>
+                <li><a href="./index.html"></a>Sobre</li>
+                <li><a href="./login.html"></a>Login</li>
             </ul>
-    
+
             <div class="minhasInfo">
                 <div class="tituloFooter" style="display: flex; flex-direction: column;">
                     <p style="font-size: 25px; margin-bottom: 2%;">Nossas redes sociais </p>
                     <hr style="margin-bottom: 5%;">
                 </div>
                 <div class="imgRedes" style="display: flex; align-items: center;">
-                    <a href="https://www.instagram.com/bru.sanguini/" ><img src="./img/instagram.png" width="40px"></a>
-                    <a href="https://www.linkedin.com/in/brunasanguini/" ><img src="./img/linkedin.png" width="41px"></a>
+                    <a href="https://www.instagram.com/bru.sanguini/"><img src="./img/instagram.png" width="40px"></a>
+                    <a href="https://www.linkedin.com/in/brunasanguini/"><img src="./img/linkedin.png" width="41px"></a>
                 </div>
             </div>
-    
+
         </footer>
 
     </div>
 </body>
+
 </html>
 
 <script>
@@ -175,8 +183,8 @@
     var contLivroNeuro = Number(0);
     var contLivroJogador = Number(0);
     var contLivroFim = Number(0);
-    
-    var ganhadorVarVar = "";
+
+    var varLivro = "";
 
     var resp1A = "";
     var resp1B = "";
@@ -204,7 +212,7 @@
         }
     }
 
-    
+
 
     var texto2a = "";
     var texto2b = "";
@@ -263,12 +271,12 @@
 
             contLivroGOT++;
             contLivroSenhor++;
-            
+
         }
         if (resposta2 == "Feiticeiros") {
             texto2a = "Animais falantes"
             texto2b = "Varinhas mágicas"
-            
+
             contLivroMago++;
             contLivroHP++;
 
@@ -285,14 +293,14 @@
     }
 
     function perguntaQuizz3(resposta3) {
-        
-        if (resposta3 == "Competições e pontuações")  {
+
+        if (resposta3 == "Competições e pontuações") {
             texto2a = "Trágico"
             texto2b = "Emocionante"
 
             contLivroJogador++;
         }
-        if (resposta3 == "Corrida contra o tempo"){
+        if (resposta3 == "Corrida contra o tempo") {
             texto2a = "Trágico"
             texto2b = "Emocionante"
 
@@ -312,37 +320,37 @@
             texto2b = "Épico"
 
             contLivroGOT++;
-            
+
         }
-        if ( resposta3 == "Bem vs Mal") {
+        if (resposta3 == "Bem vs Mal") {
             texto2a = "Dramático"
             texto2b = "Épico"
 
             contLivroSenhor++;
         }
-        if(resposta3 == "Animais falantes"){
+        if (resposta3 == "Animais falantes") {
             texto2a = "Triste"
             texto2b = "Final feliz"
 
             contLivroMago++;
 
         }
-        if(resposta3 == "Varinhas mágicas"){
+        if (resposta3 == "Varinhas mágicas") {
             texto2a = "Triste"
             texto2b = "Final feliz"
 
             contLivroHP++;
 
         }
-        if (resposta3 == "Luta contra o tempo"){
+        if (resposta3 == "Luta contra o tempo") {
             texto2a = "Viagens ao futuro e passado"
             texto2b = "A criação de um novo império"
 
             contLivroFim++;
 
         }
-       
-        
+
+
         pergunta4.style = "display: block";
         pergunta4.innerHTML = `
         <div class="pQuizz">Você prefere uma história com um final:</div>
@@ -354,18 +362,18 @@
         `
     }
     function perguntaQuizz4(resposta4) {
-        
+
         if (resposta4 == "Dramático") {
             texto2a = "Magia"
             texto2b = "Luta"
 
             contLivroGOT++;
-            
+
         }
         if (resposta4 == "Épico") {
             texto2a = "Magia"
             texto2b = "Luta"
-            
+
             contLivroSenhor++;
 
         }
@@ -393,18 +401,18 @@
         if (resposta4 == "Emocionante") {
             texto2a = "Um ponto de vista"
             texto2b = "Vários pontos de vistas"
-            
+
             contLivroJogador++;
-            
+
         }
-        if (resposta4 == "Viagens ao futuro e passado"){
+        if (resposta4 == "Viagens ao futuro e passado") {
             texto2a = "Série"
             texto2b = "Livro único"
 
             contLivroFim++;
 
         }
-        if (resposta4 == "A criação de um novo império"){
+        if (resposta4 == "A criação de um novo império") {
             texto2a = "Série"
             texto2b = "Livro único"
 
@@ -412,11 +420,11 @@
 
         }
 
-        
-        
+
+
         pergunta5.style = "display: block";
         pergunta5.innerHTML = `
-        <div class="pQuizz">Você prefere uma história com:</div>
+        <div class="pQuizz">O que você prefere:</div>
         <div class="btnQuizzPerg">
         <button id="perg5A" class="perguntas" style=" background-color: #3E7F89;" onclick="perguntaQuizz5('${texto2a}')">${texto2a}</button>
         <div class="pQuizz" style="display: flex; align-items: center;">ou</div>
@@ -427,29 +435,29 @@
     function perguntaQuizz5(resposta5) {
         divQuizz.style = "display:none";
         quizzResultado.style = "display:block";
-        
-        if (resposta5 == "Magia"){
+
+        if (resposta5 == "Magia") {
             contLivroSenhor++;
         }
-        if (resposta5 == "Luta"){
+        if (resposta5 == "Luta") {
             contLivroGOT++;
         }
-        if (resposta5 == "Corrida contra o tempo"){
+        if (resposta5 == "Corrida contra o tempo") {
             contLivroMago++;
         }
-        if (resposta5 == "Lutas"){
+        if (resposta5 == "Lutas") {
             contLivroHP++;
         }
-        if (resposta5 == "Um ponto de vista"){
+        if (resposta5 == "Um ponto de vista") {
             contLivroNeuro++;
         }
-        if (resposta5 == "Vários pontos de vistas"){
+        if (resposta5 == "Vários pontos de vistas") {
             contLivroJogador++;
         }
-        if (resposta5 == "Série"){
+        if (resposta5 == "Série") {
             contLivroDuna++;
         }
-        if (resposta5 == "Livro único"){
+        if (resposta5 == "Livro único") {
             contLivroFim++;
         }
         if (contLivroDuna >= 3) {
@@ -463,7 +471,7 @@
                     </div>  
                 </div>`
 
-            ganhadorVar = 4
+            varLivro = 'Duna'
         }
         if (contLivroSenhor >= 3) {
             quizzResultado.innerHTML = `
@@ -473,7 +481,7 @@
                     <div onclick="mostrar(11)">
                         <img src="./img/imgCapaLivros/ASociedadedoAnel.jpg">
                     </div>  `
-             ganhadorVar = 11
+            varLivro = 'A sociedade do Anel'
         }
         if (contLivroGOT >= 3) {
             quizzResultado.innerHTML = `<div class="containerQuizzResul" style="display: flex;">
@@ -482,7 +490,7 @@
                     <div onclick="mostrar(3)">
                         <img src="./img/imgCapaLivros/AGuerrado Tronos.jpg">
                     </div>  `
-                    ganhadorVar = 3
+            varLivro = 'As Crônicas de Gelo e Fogo'
         }
         if (contLivroMago >= 3) {
             quizzResultado.innerHTML = `<div class="containerQuizzResul" style="display: flex;">
@@ -491,16 +499,16 @@
                     <div onclick="mostrar(14)">
                         <img src="./img/imgCapaLivros/magoAprendiz.jpg">
                     </div>  `
-                    ganhadorVar = 14
+            varLivro = 'O Mago Aprendiz'
         }
         if (contLivroHP >= 3) {
             quizzResultado.innerHTML = `<div class="containerQuizzResul" style="display: flex;">
                      <div class="pQuizzResultado">Seu resultado foi: <br>
-                    Duna - Parte 1</div>
+                    Harry Potter e a Pedra Filosofal</div>
                     <div onclick="mostrar(15)">
                         <img src="./img/imgCapaLivros/HarryPottereaPedraFilosofal.jpg">
                     </div>  `
-                    ganhadorVar = 15
+            varLivro = 'Harry Potter e a Pedra Filosofal'
         }
         if (contLivroNeuro >= 3) {
             quizzResultado.innerHTML = `<div class="containerQuizzResul" style="display: flex;">
@@ -509,7 +517,7 @@
                     <div onclick="mostrar(5)">
                         <img src="./img/imgCapaLivros/Neuromancer.jpg">
                     </div>  `
-                    ganhadorVar = 5
+            varLivro = 'Neuromancer'
         }
         if (contLivroJogador >= 3) {
             quizzResultado.innerHTML = `<div class="containerQuizzResul" style="display: flex;">
@@ -518,7 +526,7 @@
                     <div onclick="mostrar(20)">
                         <img src="./img/imgCapaLivros/JogadorNúmeroUm.jpg">
                     </div>  `
-                    ganhadorVar = 20
+            varLivro = 'Jogador Número Um'
         }
         if (contLivroFim >= 3) {
             quizzResultado.innerHTML = `<div class="containerQuizzResul" style="display: flex;">
@@ -527,45 +535,67 @@
                     <div onclick="mostrar(1)">
                         <img src="./img/imgCapaLivros/oFimdoAmanha.jpg">
                     </div>  `
-                    ganhadorVar = 1
+            varLivro = 'O Fim da Eternidade'
         }
 
-       
+        cadastrarResultado();
+
 
     }
-
+    sessionStorage.setItem('varLivro');
+    // sessionStorage.RESULQUIZZ_QUIZZ = varLivro;
+    var fkUsuarioVar = sessionStorage.ID_USUARIO;
     function cadastrarResultado() {
-        
+        // aguardar();
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fe//tch logo abaixo
-        
-        
-    
+        var fkUsuarioVar = sessionStorage.ID_USUARIO;
+        var fkLivroVar = varLivro;
+
+
+
         // Enviando o valor da nova input
-        fetch("/quizz/cadastrarQuizz", {
+        fetch("/quizz/cadastrarResultado", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
-                fkUsuarioServer: ID_USUARIO,
-                fkLivroServer: ganhadorVar,
-                
+                fkUsuarioServer: fkUsuarioVar,
+                fkLivroServer: fkLivroVar,
 
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    resposta.json().then(json => {
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+
+                        sessionStorage.RESULQUIZZ_QUIZZ = json.fkLivroVar;
+                        
+                    });
+
+                    // setTimeout(function () {
+                    //     window.location = "dashboard.html";
+                    // }, 3000)
+                   
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
             })
-        }).then(function (resposta) {
-
-            console.log("resposta: ", resposta);
-
-           
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            // finalizarAguardar();
-        });
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
+            });
 
         return false;
     }
+
+
 
 </script>
