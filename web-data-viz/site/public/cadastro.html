@@ -14,27 +14,30 @@
 
 <body>
   <div class="corFundo">
-    <div class="header" style="width: 100%">
+    <div class="header" style="width: 100%;">
       <div class="logo">
-        <a href="./index.html"><img src="./img/novoLogo.png" alt="logo do site" width="70%" /></a>
+          <a href="./index.html"><img src="./img/novoLogo.png" alt="logo do site" width="70%"></a>
       </div>
       <div class="menuHeader">
-        <div class="dropdown">
-          <button class="dropbtn">Gênero</button>
-          <div class="dropdown-content">
-            <a href="./fantasia.html">Fantasia</a>
-            <a href="./ficcao.html">Ficção Científica</a>
+          <div class="dropdown">
+              <button class="dropbtn">Gênero</button>
+              <div class="dropdown-content">
+                  <a href="./fantasia.html">Fantasia</a>
+                  <a href="./ficcao.html">Ficção Científica</a>
+              </div>
           </div>
-        </div>
-        <p><a href="quizz.html">Quizz</a></p>
-        <p><a href="./index.html#sobreMim">Sobre</a></p>
+          <p><a href="quizz.html">Quizz</a></p>
+          <p><a href="./index.html#sobreMim">Sobre</a></p>
       </div>
       <div class="cadastroLogin">
-        <p><a href="cadastro.html">Cadastro</a></p>
-        <hr style="height: 8vh" />
-        <p><a href="login.html">Login</a></p>
+          <p><a href="cadastro.html">Cadastro</a></p>
+          <hr style="height: 8vh;">
+          <p><a href="login.html">Login</a></p>
+          <hr style="height: 8vh;">
+          <p><a href="dashboard.html">Perfil</a></p>
       </div>
-    </div>
+
+  </div>
     <div class="alerta_erro">
       <div class="card_erro" id="cardErro">
         <span id="mensagem_erro"></span>
@@ -206,8 +209,8 @@
             Swal.fire('Cadastro realizado com sucesso!')
             setTimeout(function () {
               window.location = "login.html";
-                }, 3000)
-          
+            }, 3000)
+
           } else {
             throw "Houve um erro ao tentar realizar o cadastro!";
           }
