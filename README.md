@@ -12,10 +12,6 @@
 </p>
 
 
-
-![image](https://github.com/brunamatuciak/LivrariaSanguini/assets/125585854/7b1f000b-b3b9-421d-a06b-b4703567006f)
-
-
 ## 📚 Sobre o projeto
 
 <p>O site Livraria Sanguini é um projeto para o curso de Ciência da Computação na faculdade SpTech, em que o objetivo é criar um tema baseado em algo que você goste e se identifica. O assunto do site é sobre livros, girando em torno dos gêneros de Ficção Científica e Fantasia que são os meus preferidos atualmente, espero que esse projeto melhorar minhas aptidões na linguagens de programações requeridas e que eu consiga mostrar um pouco de todos os mundos os quais já visitei.</p>
